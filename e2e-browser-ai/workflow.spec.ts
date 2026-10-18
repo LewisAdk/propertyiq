@@ -177,16 +177,20 @@ test("Research Lab asks before any download and states model identity", async ({
   ).toEqual([]);
 });
 
-test("homepage entry under the search bar opens the workspace and returns", async ({
-  page,
-}) => {
+test("homepage tool card opens the workspace and returns", async ({ page }) => {
   await page.goto(APP + "/");
-  const entry = page.getByRole("link", { name: /Document assistant/ });
+  const entry = page.getByRole("button", { name: /Document assistant/ });
   await expect(entry).toBeVisible();
-  // It sits under the search bar (the deal composer), not floating over the page.
-  const composer = await page.locator(".iq-composer").boundingBox();
-  const box = await entry.boundingBox();
-  expect(box!.y).toBeGreaterThan(composer!.y + composer!.height);
+  // Third card in "Or start with a tool"; one row of three on desktop, stacked on phones.
+  const cards = page.locator(".iq-other-modes > button");
+  await expect(cards).toHaveCount(3);
+  await expect(cards.nth(2)).toHaveText(/Document assistant/);
+  const tops = await cards.evaluateAll((els) =>
+    els.map((e) => Math.round(e.getBoundingClientRect().top)),
+  );
+  if (test.info().project.name === "desktop")
+    expect(new Set(tops).size).toBe(1);
+  else expect(new Set(tops).size).toBe(3);
   expect(await entry.evaluate((e) => getComputedStyle(e).position)).not.toBe(
     "fixed",
   );
@@ -230,7 +234,7 @@ test("without WebGPU the research model is not offered to load", async ({
 test("no model file is requested before explicit consent", async ({ page }) => {
   const requests = await open(page); // opens #documents
   await page.goto(APP + "/");
-  await page.getByRole("link", { name: /Document assistant/ }).click();
+  await page.getByRole("button", { name: /Document assistant/ }).click();
   await page.goto(APP + "/#research-lab");
   await page.getByRole("radio", { name: /Generic Qwen3-0.6B/ }).check();
   await page

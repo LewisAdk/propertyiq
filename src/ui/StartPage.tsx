@@ -651,21 +651,6 @@ export default function StartPage({
                   </p>
                 )}
               </form>
-              {documentAssistant && (
-                <a
-                  className="button iq-assist"
-                  href="#documents"
-                  onClick={(e) => {
-                    // The app turns hash links into pushState, which fires no hashchange.
-                    e.preventDefault();
-                    navigate("#documents");
-                  }}
-                >
-                  <ScanSearch size={18} aria-hidden="true" />
-                  Document assistant
-                  <span className="iq-assist-tag">Experimental</span>
-                </a>
-              )}
               <div className="brief-preview" aria-live="polite">
                 {Object.entries(live).map(([key, n]) => (
                   <span key={key}>
@@ -707,6 +692,18 @@ export default function StartPage({
                     <strong>Monthly planner</strong>
                     <span>Use when timing matters: lease-up, renovations.</span>
                   </button>
+                  {documentAssistant && (
+                    <button
+                      data-document-assistant
+                      onClick={() => navigate("#documents")}
+                    >
+                      <ScanSearch size={22} aria-hidden="true" />
+                      <strong>Document assistant</strong>
+                      <span>
+                        Experimental T-12 review that runs on your device.
+                      </span>
+                    </button>
+                  )}
                 </div>
                 <div className="iq-other-more">
                   <button onClick={() => showGuide({ step: 1 })}>

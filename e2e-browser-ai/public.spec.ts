@@ -8,9 +8,11 @@ import { join } from "node:path";
 // Run: playwright test -c playwright.browser-ai.config.ts --project=public
 const APP = process.env.PIQ_APP_URL ?? "http://127.0.0.1:4198";
 const HF = /^https:\/\/(huggingface\.co|[^/]+\.hf\.co)\//;
-const RESULTS = process.env.PIQ_APP_URL
-  ? "docs/step18-2/preview-results.json"
-  : "docs/step18-2/public-release-results.json";
+const RESULTS = process.env.PIQ_RESULTS
+  ? process.env.PIQ_RESULTS
+  : process.env.PIQ_APP_URL
+    ? "docs/step18-2/preview-results.json"
+    : "docs/step18-2/public-release-results.json";
 const results: Record<string, unknown> = existsSync(RESULTS)
   ? JSON.parse(readFileSync(RESULTS, "utf8"))
   : {};
@@ -67,7 +69,7 @@ test.describe.configure({ mode: "serial", timeout: 90 * 60_000 });
 test("first visit: consent, download from Hugging Face, classify, calculate", async () => {
   const { context, page, requests, errors } = await launch(true);
   await page.goto(APP + "/");
-  await page.getByRole("link", { name: /Document assistant/ }).click();
+  await page.getByRole("button", { name: /Document assistant/ }).click();
   await page.locator("#research-lab").scrollIntoViewIfNeeded();
   await page
     .getByRole("radio", { name: /PropertyIQ research Qwen3-1.7B/ })

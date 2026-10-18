@@ -35,7 +35,9 @@ export default function Experiment() {
           navigate("#home");
           // Return keyboard focus to the button that opened the page.
           requestAnimationFrame(() =>
-            document.querySelector<HTMLElement>(".iq-assist")?.focus(),
+            document
+              .querySelector<HTMLElement>("[data-document-assistant]")
+              ?.focus(),
           );
         }}
       />
