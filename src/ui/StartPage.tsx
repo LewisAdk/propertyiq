@@ -18,11 +18,13 @@ import {
   CalendarRange,
   PenLine,
   FolderOpen,
+  ScanSearch,
 } from "lucide-react";
 import Brand from "./Brand";
 import ThemeToggle from "./ThemeToggle";
 import StoryCard from "./StoryCard";
 import { swap } from "./viewTransition";
+import { documentAssistant, navigate } from "./routes";
 import {
   briefExamples,
   extractBrief,
@@ -649,6 +651,21 @@ export default function StartPage({
                   </p>
                 )}
               </form>
+              {documentAssistant && (
+                <a
+                  className="button iq-assist"
+                  href="#documents"
+                  onClick={(e) => {
+                    // The app turns hash links into pushState, which fires no hashchange.
+                    e.preventDefault();
+                    navigate("#documents");
+                  }}
+                >
+                  <ScanSearch size={18} aria-hidden="true" />
+                  Document assistant
+                  <span className="iq-assist-tag">Experimental</span>
+                </a>
+              )}
               <div className="brief-preview" aria-live="polite">
                 {Object.entries(live).map(([key, n]) => (
                   <span key={key}>

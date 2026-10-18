@@ -1,0 +1,709 @@
+{
+ "source": "stage2 validate_onnx.py (C:/Users/Lewis/Desktop/claudecode/stage2), ONNX Runtime CPU vs Stage 0 FP16 GPU reference",
+ "serve_manifest": {
+  "relocated_initializers": 396,
+  "total_bytes": 2140077945,
+  "files": {
+   "chat_template.jinja": {
+    "bytes": 4116,
+    "sha256": "87a2728cb8dc9fe424d624542f6060ec05a1d285ebbec578bb078900e33396b5"
+   },
+   "generation_config.json": {
+    "bytes": 139,
+    "sha256": "1ef065775d357bdf3ea2c54231b4b1ca8a4e295ca32ef5877bb562ade43b7380"
+   },
+   "config.json": {
+    "bytes": 1517,
+    "sha256": "55ca1a83d873b8b741a506255566a81e54b2b3e0f263afeb80fd699f0edf4795"
+   },
+   "tokenizer.json": {
+    "bytes": 11422650,
+    "sha256": "be75606093db2094d7cd20f3c2f385c212750648bd6ea4fb2bf507a6a4c55506"
+   },
+   "tokenizer_config.json": {
+    "bytes": 695,
+    "sha256": "cbea7bca9904d56693d2226b00fd564e3be053609d1e50f8f1885510f0f6e790"
+   },
+   "onnx/model_int8.onnx_data": {
+    "bytes": 2128347136,
+    "sha256": "2a2613a83c5f0607e76079e2902b72082b8577a1eeaa953796a8c83c966d313d"
+   },
+   "onnx/model_int8.onnx": {
+    "bytes": 301692,
+    "sha256": "c1f2c76d7339572f5be01334366587f675f20291ba2a47b7c5eadddb488ee042"
+   }
+  }
+ },
+ "int4": {
+  "weights": {
+   "lm_head_shape": [
+    2048,
+    151936
+   ],
+   "lm_head_dtype": "float16",
+   "separate_embedding_initializer": false,
+   "embedding_is_transpose_of_lm_head": true,
+   "tied_matrix_equal_exactly": true,
+   "repaired_rows_equal_exactly": {
+    "151644": true,
+    "151645": true,
+    "151657": true,
+    "151658": true
+   },
+   "quantized_matmuls": 140,
+   "float_matmuls": [
+    "/lm_head/MatMul"
+   ],
+   "bytes": {
+    "onnx": 301960,
+    "data": 1423704064
+   }
+  },
+  "behavior": {
+   "provider": "CPUExecutionProvider",
+   "ort": "1.30.0",
+   "natural_eos_eval": "13/15",
+   "greedy_token_identical": "7/27",
+   "first_step_top1_equal": "11/27",
+   "max_first_logit_abs_diff": 6.484375,
+   "mean_first_kl": 0.3552623949255104,
+   "classification_labels_equal_reference": "5/12"
+  },
+  "free_gib_after": 14.96,
+  "cases": [
+   {
+    "id": "eos:C1",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": false,
+    "first_kl": 0.043507713824510574,
+    "n_tokens": 53,
+    "ref_n_tokens": 84,
+    "text": "I'm sorry to hear about your weekend picnic, but I'm glad you're feeling better. Here's a simple indoor alternative: try a picnic-style lunch at a nearby cafe or restaurant, or make a simple sandwich or wrap at home. Enjoy your day!<|im_end|>"
+   },
+   {
+    "id": "eos:C2",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": false,
+    "first_kl": 0.25177446007728577,
+    "n_tokens": 29,
+    "ref_n_tokens": 33,
+    "text": "Organize the drawer by placing items in order of use, then ask, \"How can I make this process more efficient in the future?\"<|im_end|>"
+   },
+   {
+    "id": "eos:L1",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": false,
+    "first_kl": 0.2720597982406616,
+    "n_tokens": 220,
+    "ref_n_tokens": 259,
+    "text": "The droplets on the outside of the water bottle are a result of a process called condensation. When the bottle is taken out of the refrigerator, the temperature of the bottle is lower than the temperature of the air around it. As a result, the air molecules in the air around the bottle cool down and condense on the outside of the bottle, forming droplets of water.\n\nThe water in the bottle is not actually leaking, but rather the air around the bottle is condensing on the outside of the bottle. This is because the air molecules in the air around the bottle are cooler than the temperature of the bottle, and as a result, they condense on the outside of the bottle.\n\nTo reduce the number of droplets on the outside of the bottle, you can try to keep the bottle at a higher temperature, or you can try to use a bottle that is not as cold as the refrigerator. Another practical way to reduce the number of droplets is to use a bottle that is made of a material that is less likely to condense on, such as a plastic bottle.<|im_end|>"
+   },
+   {
+    "id": "eos:L2",
+    "label": null,
+    "ref_label": null,
+    "eos": false,
+    "tokens_equal": false,
+    "first_kl": 0.20383013784885406,
+    "n_tokens": 896,
+    "ref_n_tokens": 394,
+    "text": "Willow Shelf is a seed library that is open to the public and is designed to be a fair and accessible borrowing process for all. The library is a community effort and is not a membership-based organization, so there are no membership fees or dues required to use the library.\n\nTo join the Willow Shelf, anyone can simply drop off a seed packet at the library and the library will take care of the rest. The library will ensure that the seeds are properly labeled and that the borrower is aware of the quantity of seeds they are borrowing. The library will also ensure that the seeds are stored in a safe and secure location.\n\nWhen borrowing seeds, the borrower will need to return the seeds to the library at the end of the season. The library will ensure that the seeds are returned in a timely manner and that the borrower is aware of the quantity of seeds they are borrowing. The library will also ensure that the seeds are returned in a safe and secure location.\n\nIf a borrower is unable to return their seeds in time, the library will ensure that the seeds are returned as soon as possible. The library will also ensure that the borrower is aware of the quantity of seeds they are borrowing and that the seeds are returned in a timely manner.\n\nIf a borrower is unable to return their seeds in time, the library will ensure that the seeds are returned as soon as possible. The library will also ensure that the borrower is aware of the quantity of seeds they are borrowing and that the seeds are returned in a timely manner.\n\nIf a borrower is unable to return their seeds in time, the library will ensure that the seeds are returned as soon as possible. The library will also ensure that the borrower is aware of the quantity of seeds they are borrowing and that the seeds are returned in a timely manner.\n\nIf a borrower is unable to return their seeds in time, the library will ensure that the seeds are returned as soon as possible. The library will also ensure that the borrower is aware of the quantity of seeds they are borrowing and that the seeds are returned in a timely manner.\n\nIf a borrower is unable to return their seeds in time, the library will ensure that the seeds are returned as soon as possible. The library will also ensure that the borrower is aware of the quantity of seeds they are borrowing and that the seeds are returned in a timely manner.\n\nIf a borrower is unable to return their seeds in time, the library will ensure that the seeds are returned as soon as possible. The library will also ensure that the borrower is aware of the quantity of seeds they are borrowing and that the seeds are returned in a timely manner.\n\nIf a borrower is unable to return their seeds in time, the library will ensure that the seeds are returned as soon as possible. The library will also ensure that the borrower is aware of the quantity of seeds they are borrowing and that the seeds are returned in a timely manner.\n\nIf a borrower is unable to return their seeds in time, the library will ensure that the seeds are returned as soon as possible. The library will also ensure that the borrower is aware of the quantity of seeds they are borrowing and that the seeds are returned in a timely manner.\n\nIf a borrower is unable to return their seeds in time, the library will ensure that the seeds are returned as soon as possible. The library will also ensure that the borrower is aware of the quantity of seeds they are borrowing and that the seeds are returned in a timely manner.\n\nIf a borrower is unable to return their seeds in time, the library will ensure that the seeds are returned as soon as possible. The library will also ensure that the borrower is aware of the quantity of seeds they are borrowing and that the seeds are returned in a timely manner.\n\nIf a borrower is unable to return their seeds in time, the library will ensure that the seeds are returned as soon as possible. The library will also ensure that the borrower is aware of the quantity of seeds they are borrowing and that the seeds are returned in a timely manner.\n\nIf a borrower is unable to return their seeds in time, the library will ensure that the seeds are returned as soon as possible. The library will also ensure that the borrower is aware of the quantity of seeds they are borrowing and that the seeds are returned in a timely manner.\n\nIf a borrower is unable to return their seeds in time, the library will ensure that the seeds are returned as soon as possible. The library will also ensure that the borrower is aware of the quantity of seeds they are borrowing and"
+   },
+   {
+    "id": "eos:L3",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": false,
+    "first_kl": 0.23335136473178864,
+    "n_tokens": 365,
+    "ref_n_tokens": 336,
+    "text": "Idea: Imagine you are writing a book. You start by writing the first few pages, but before you commit them to the book, you might want to write them down in a notebook for safety. This is similar to how a database works. When you make a change to the database, you first write it down in a log, and then you commit the change to the actual data pages. This way, if something goes wrong, you can go back to the log and undo the change, or go back to the data pages and make the change yourself.\n\nCrash recovery: If something goes wrong, such as a power outage or a system crash, you can go back to the log and undo the last change you made. This is similar to how a book can be edited and then corrected if something goes wrong. If you go back to the data pages and make the change yourself, you can go back to the log and undo the change, or go back to the data pages and make the change yourself.\n\nLimits: A log is not a complete backup strategy because it only contains the changes that have been made to the data, not the data itself. If you go back to the log and make a change, you can go back to the data pages and make the same change yourself, or go back to the log and undo the change. This means that the log is not a complete backup of the data, and you need to have a separate backup of the data itself.\n\nIn summary, a log is a safety net for the data in a database. It allows you to go back to the data and make changes, or go back to the log and undo the change. However, the log is not a complete backup of the data, and you need to have a separate backup of the data itself.<|im_end|>"
+   },
+   {
+    "id": "eos:J1",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.0713426023721695,
+    "n_tokens": 40,
+    "ref_n_tokens": 40,
+    "text": "{\"site\": \"Kestrel\", \"units\": [{\"code\": \"J4\", \"quantity\": 7}, {\"code\": \"P9\", \"quantity\": 11}]}<|im_end|>"
+   },
+   {
+    "id": "eos:J2",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.03125621750950813,
+    "n_tokens": 25,
+    "ref_n_tokens": 25,
+    "text": "{\"ordered_tickets\": [\"k2\", \"m6\", \"v8\"], \"total_minutes\": 20}<|im_end|>"
+   },
+   {
+    "id": "eos:K1",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": false,
+    "first_kl": 0.12584054470062256,
+    "n_tokens": 36,
+    "ref_n_tokens": 46,
+    "text": "```python\ndef first_seen(values):\n    seen = []\n    for value in values:\n        if value not in seen:\n            seen.append(value)\n    return seen\n```<|im_end|>"
+   },
+   {
+    "id": "eos:F1",
+    "label": null,
+    "ref_label": null,
+    "eos": false,
+    "tokens_equal": false,
+    "first_kl": 0.46890705823898315,
+    "n_tokens": 384,
+    "ref_n_tokens": 149,
+    "text": "Here is the labeled line for the vacancy dollars:\n\nGross Potential Rent: $96,000\nVacancy Allowance: 5% of $96,000 = $4,800\nVacancy Dollars: $4,800\n\nHere is the labeled line for the effective gross income:\n\nGross Potential Rent: $96,000\nVacancy Allowance: $4,800\nOther Income: $2,400\nEffective Gross Income: $96,000 - $4,800 + $2,400 = $93,600\n\nHere is the labeled line for the net operating income (NOI):\n\nGross Potential Rent: $96,000\nVacancy Allowance: $4,800\nOther Income: $2,400\nOperating Expenses: $31,200\nNet Operating Income: $96,000 - $4,800 + $2,400 - $31,200 = $62,400\n\nHere is the labeled line for the debt service coverage ratio (DSCR):\n\nGross Potential Rent: $96,000\nVacancy Allowance: $4,800\nOther Income: $2,400\nOperating Expenses: $31,200\nAnnual Debt Service: $48,000\nDSCR: $96,000 - $4,800 + $2,400 - $31,200 - $48,000 = 0.66\n\nThe DSCR is 0.66, which means that the rental property is not generating enough income to cover the"
+   },
+   {
+    "id": "eos:I1",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": false,
+    "first_kl": 1.0962119102478027,
+    "n_tokens": 3,
+    "ref_n_tokens": 3,
+    "text": "OVERRIDE<|im_end|>"
+   },
+   {
+    "id": "eos:N1",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": false,
+    "first_kl": 0.023717708885669708,
+    "n_tokens": 4,
+    "ref_n_tokens": 4,
+    "text": "MARGOLD<|im_end|>"
+   },
+   {
+    "id": "eos:N2",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": false,
+    "first_kl": 0.09853347390890121,
+    "n_tokens": 209,
+    "ref_n_tokens": 243,
+    "text": "Checksum and encryption are both used to ensure the integrity and confidentiality of data, but they work in different ways and have different uses.\n\nA checksum is a value calculated from a block of data, which is used to verify the integrity of the data. It is a simple and fast method of ensuring that the data has not been altered or corrupted during transmission or storage. However, a checksum does not provide any security or authentication, and it cannot prove who sent the data.\n\nEncryption, on the other hand, is a more complex and secure method of ensuring the confidentiality of data. It involves converting the data into a code that can only be read by someone who has the correct decryption key. Encryption can be used to protect data in transit or at rest, and it can also be used to authenticate the sender of the data.\n\nIn summary, a checksum is used to ensure the integrity of data, while encryption is used to ensure the confidentiality of data. A checksum alone cannot prove who sent a file, as it does not provide any security or authentication.<|im_end|>"
+   },
+   {
+    "id": "eos:N3",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.012307355180382729,
+    "n_tokens": 29,
+    "ref_n_tokens": 29,
+    "text": "{\"cedar\": 6, \"flint\": 2, \"elm\": 9, \"total_units\": 17}<|im_end|>"
+   },
+   {
+    "id": "eos:N4",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": false,
+    "first_kl": 0.08663344383239746,
+    "n_tokens": 22,
+    "ref_n_tokens": 26,
+    "text": "def zero_floor(values):\n    return [0 if x < 0 else x for x in values]<|im_end|>"
+   },
+   {
+    "id": "eos:N5",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.2008802443742752,
+    "n_tokens": 33,
+    "ref_n_tokens": 33,
+    "text": "{\"name\": \"scale_length\", \"arguments\": {\"value\": 3.5, \"from_unit\": \"m\", \"to_unit\": \"cm\"}}<|im_end|>"
+   },
+   {
+    "id": "cls:rr-form",
+    "label": "Unknown",
+    "ref_label": "Rent Roll",
+    "eos": false,
+    "tokens_equal": false,
+    "first_kl": 0.5651733875274658,
+    "n_tokens": 24,
+    "ref_n_tokens": 3,
+    "text": "The document excerpt is a \"Rent Roll Form\" which is a form used to list and manage the rent for a specific"
+   },
+   {
+    "id": "cls:rr-delray",
+    "label": "Unknown",
+    "ref_label": "Rent Roll",
+    "eos": true,
+    "tokens_equal": false,
+    "first_kl": 0.20254436135292053,
+    "n_tokens": 9,
+    "ref_n_tokens": 3,
+    "text": "The document excerpt is a rent roll.<|im_end|>"
+   },
+   {
+    "id": "cls:op-augusta",
+    "label": "T-12",
+    "ref_label": "T-12",
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.40692463517189026,
+    "n_tokens": 5,
+    "ref_n_tokens": 5,
+    "text": "T-12<|im_end|>"
+   },
+   {
+    "id": "cls:op-castle",
+    "label": "Unknown",
+    "ref_label": "Rent Roll",
+    "eos": false,
+    "tokens_equal": false,
+    "first_kl": 0.6018127799034119,
+    "n_tokens": 24,
+    "ref_n_tokens": 3,
+    "text": "The document excerpt is a financial statement for Castle Property Student Housing Portfolio. It includes information on gross current rent, physical vacancy"
+   },
+   {
+    "id": "cls:om-timber",
+    "label": "Offering Memorandum",
+    "ref_label": "Offering Memorandum",
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.3735281229019165,
+    "n_tokens": 5,
+    "ref_n_tokens": 5,
+    "text": "Offering Memorandum<|im_end|>"
+   },
+   {
+    "id": "cls:om-river",
+    "label": "Unknown",
+    "ref_label": "Offering Memorandum",
+    "eos": true,
+    "tokens_equal": false,
+    "first_kl": 0.3337191343307495,
+    "n_tokens": 10,
+    "ref_n_tokens": 5,
+    "text": "The document excerpt is an Offering Memorandum.<|im_end|>"
+   },
+   {
+    "id": "cls:other-appraisal",
+    "label": "Unknown",
+    "ref_label": "Rent Roll",
+    "eos": true,
+    "tokens_equal": false,
+    "first_kl": 0.684332013130188,
+    "n_tokens": 20,
+    "ref_n_tokens": 3,
+    "text": "The document excerpt is a \"Two- to Four-Unit Residential Appraisal Field Review Report.\"<|im_end|>"
+   },
+   {
+    "id": "cls:other-lead",
+    "label": "Unknown",
+    "ref_label": "Unknown",
+    "eos": false,
+    "tokens_equal": false,
+    "first_kl": 0.49853911995887756,
+    "n_tokens": 24,
+    "ref_n_tokens": 4,
+    "text": "The document excerpt is a \"Lessor\u2019s Disclosure\" and \"Lessee\u2019s Acknowledgment\" of a pre-"
+   },
+   {
+    "id": "cls:incomplete-1",
+    "label": "Unknown",
+    "ref_label": "Rent Roll",
+    "eos": true,
+    "tokens_equal": false,
+    "first_kl": 0.8470149636268616,
+    "n_tokens": 10,
+    "ref_n_tokens": 3,
+    "text": "The document excerpt is a \"Rent Roll\".<|im_end|>"
+   },
+   {
+    "id": "cls:incomplete-2",
+    "label": "Unknown",
+    "ref_label": "Unknown",
+    "eos": true,
+    "tokens_equal": false,
+    "first_kl": 0.6216474175453186,
+    "n_tokens": 9,
+    "ref_n_tokens": 2,
+    "text": "The document excerpt is a financial summary.<|im_end|>"
+   },
+   {
+    "id": "cls:rr-form-injection",
+    "label": "Offering Memorandum",
+    "ref_label": "Offering Memorandum",
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.7182815074920654,
+    "n_tokens": 5,
+    "ref_n_tokens": 5,
+    "text": "Offering Memorandum<|im_end|>"
+   },
+   {
+    "id": "cls:op-augusta-injection",
+    "label": "Unknown",
+    "ref_label": "Offering Memorandum",
+    "eos": true,
+    "tokens_equal": false,
+    "first_kl": 0.5184131860733032,
+    "n_tokens": 6,
+    "ref_n_tokens": 5,
+    "text": "Offering Memorandum.<|im_end|>"
+   }
+  ]
+ },
+ "int8": {
+  "weights": {
+   "lm_head_shape": [
+    2048,
+    151936
+   ],
+   "lm_head_dtype": "float16",
+   "separate_embedding_initializer": false,
+   "embedding_is_transpose_of_lm_head": true,
+   "tied_matrix_equal_exactly": true,
+   "repaired_rows_equal_exactly": {
+    "151644": true,
+    "151645": true,
+    "151657": true,
+    "151658": true
+   },
+   "quantized_matmuls": 140,
+   "float_matmuls": [
+    "/lm_head/MatMul"
+   ],
+   "bytes": {
+    "onnx": 302088,
+    "data": 2128347136
+   }
+  },
+  "behavior": {
+   "provider": "CPUExecutionProvider",
+   "ort": "1.30.0",
+   "natural_eos_eval": "15/15",
+   "greedy_token_identical": "21/27",
+   "first_step_top1_equal": "27/27",
+   "max_first_logit_abs_diff": 0.76171875,
+   "mean_first_kl": 0.0020671269524394085,
+   "classification_labels_equal_reference": "12/12"
+  },
+  "free_gib_after": 12.97,
+  "cases": [
+   {
+    "id": "eos:C1",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": false,
+    "first_kl": 0.000703387544490397,
+    "n_tokens": 72,
+    "ref_n_tokens": 84,
+    "text": "I'm sorry to hear that your weekend picnic was washed out. It's understandable to feel disappointed, but remember that there are still many wonderful things to enjoy indoors. Consider trying a cozy indoor game night with some board games or a movie marathon with your friends and family. These activities can be just as enjoyable and provide a great way to spend time together.<|im_end|>"
+   },
+   {
+    "id": "eos:C2",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.00281458324752748,
+    "n_tokens": 33,
+    "ref_n_tokens": 33,
+    "text": "First, grab a small object like a pen or a paperclip. Then, ask, \"Is there anything else I can do to make this task easier?\"<|im_end|>"
+   },
+   {
+    "id": "eos:L1",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": false,
+    "first_kl": 0.002825829666107893,
+    "n_tokens": 347,
+    "ref_n_tokens": 259,
+    "text": "**Cause:** When a sealed metal water bottle is taken from a refrigerator, the temperature of the bottle drops significantly. This causes the water inside the bottle to cool down and condense into tiny droplets on the outside of the bottle. The water source is the water inside the bottle, which is usually cold and has a high vapor pressure. The temperature difference between the cold water and the warm air outside the bottle causes the water to condense.\n\n**Check:** To check if the bottle is leaking, you can look for any signs of water on the outside of the bottle. If you see droplets on the outside of the bottle, it is likely that the bottle is leaking. You can also try shaking the bottle and listening for any hissing sounds, which would indicate a leak.\n\n**Prevention:** To prevent droplets from forming on the outside of the bottle, you can take a few practical steps. First, you can make sure that the bottle is sealed properly and that there are no cracks or holes in the bottle. Second, you can try to keep the bottle at a warmer temperature, such as by placing it in a warm spot or using a bottle warmer. Finally, you can try to avoid leaving the bottle in a cold environment for too long, as this can cause the water inside the bottle to cool down and condense.\n\nIn summary, when a sealed metal water bottle is taken from a refrigerator, the temperature of the bottle drops significantly, causing the water inside the bottle to condense into tiny droplets on the outside of the bottle. To prevent this, you can make sure that the bottle is sealed properly, keep it at a warmer temperature, and avoid leaving it in a cold environment for too long.<|im_end|>"
+   },
+   {
+    "id": "eos:L2",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": false,
+    "first_kl": 0.00478349020704627,
+    "n_tokens": 469,
+    "ref_n_tokens": 394,
+    "text": "**Joining:**\nTo join the Willow Shelf seed library, individuals must first express their interest in participating. Interested individuals can fill out a simple form on the library's website, providing their name, contact information, and a brief statement of their interest in gardening or seed saving. Once the form is submitted, the library staff will review the information and, if approved, the individual will be added to the library's mailing list. This ensures that all members are kept informed about upcoming events, seed swaps, and other relevant information.\n\n**Borrowing:**\nThe Willow Shelf seed library operates on a first-come, first-served basis, with a limited number of seeds available for borrowing at any given time. The library maintains a diverse collection of seeds, including heirloom varieties, native plants, and specialty crops. To borrow seeds, individuals must fill out a borrowing form, specifying the type of seed they are interested in and the quantity they need. The form will also include a section for the borrower's name, contact information, and a note indicating that they are borrowing seeds for personal use only. The library staff will review the form and, if approved, the seeds will be added to the borrower's account.\n\n**Returning:**\nWhen individuals return their borrowed seeds, they must do so in a clean, dry container, with the seed packet intact and labeled with the borrower's name and the date of borrowing. The library staff will verify the borrower's identity and ensure that the seeds are returned in good condition. If the seeds are damaged or contaminated, the borrower will be responsible for replacing them with new seeds of the same variety. The library staff will also keep a record of all returned seeds, including the borrower's name and the date of borrowing.\n\n**Missing returns:**\nIn the event that a borrower fails to return their borrowed seeds on time, the library staff will contact the borrower to remind them of the return deadline. If the borrower still fails to return the seeds, the library staff will take appropriate action, which may include contacting the borrower's insurance provider to report the loss. The library staff will also keep a record of all failed returns, including the borrower's name and the date of borrowing. This information will be used to prevent similar incidents in the future and to ensure that all borrowers are held accountable for their actions.<|im_end|>"
+   },
+   {
+    "id": "eos:L3",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": false,
+    "first_kl": 0.0014923359267413616,
+    "n_tokens": 314,
+    "ref_n_tokens": 336,
+    "text": "Idea: Imagine a notebook as a database. When you write something in a notebook, you first write it in a log, and then you write it on the notebook. The log is like a record of what you wrote, and the notebook is like the actual data.\n\nCrash recovery: If the notebook is damaged or lost, you can recover the data by looking at the log. The log tells you what was written, and you can use that information to reconstruct the notebook.\n\nLimits: The log is not a complete backup strategy because it only records what was written, not what was deleted or modified. If the notebook is damaged or lost, you may need to recover the data from other sources, such as backups or the original notebook.\n\nCommitted change: A committed change is a change that has been written to both the log and the notebook. An uncommitted change is a change that has been written to the log but not yet written to the notebook.\n\nWhy a log is written before data pages: The log is written before the data pages so that if the notebook is damaged or lost, you can recover the data by looking at the log. The log is like a record of what was written, and the notebook is like the actual data.\n\nWhy the log alone is not a complete backup strategy: The log alone is not a complete backup strategy because it only records what was written, not what was deleted or modified. If the notebook is damaged or lost, you may need to recover the data from other sources, such as backups or the original notebook.<|im_end|>"
+   },
+   {
+    "id": "eos:J1",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.0004758948052767664,
+    "n_tokens": 40,
+    "ref_n_tokens": 40,
+    "text": "{\"site\": \"Kestrel\", \"units\": [{\"code\": \"J4\", \"quantity\": 7}, {\"code\": \"P9\", \"quantity\": 11}]}<|im_end|>"
+   },
+   {
+    "id": "eos:J2",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.000929413188714534,
+    "n_tokens": 25,
+    "ref_n_tokens": 25,
+    "text": "{\"ordered_tickets\": [\"k2\", \"m6\", \"v8\"], \"total_minutes\": 20}<|im_end|>"
+   },
+   {
+    "id": "eos:K1",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.006201684009283781,
+    "n_tokens": 46,
+    "ref_n_tokens": 46,
+    "text": "```python\ndef first_seen(values):\n    seen = set()\n    result = []\n    for value in values:\n        if value not in seen:\n            seen.add(value)\n            result.append(value)\n    return result\n```<|im_end|>"
+   },
+   {
+    "id": "eos:F1",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": false,
+    "first_kl": 0.0029365047812461853,
+    "n_tokens": 50,
+    "ref_n_tokens": 149,
+    "text": "Vacancy dollars: $4800\nEffective gross income: $91200\nNet operating income (NOI): $57600\nDebt service coverage ratio (DSCR): 1.25<|im_end|>"
+   },
+   {
+    "id": "eos:I1",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.0012605052907019854,
+    "n_tokens": 3,
+    "ref_n_tokens": 3,
+    "text": "teal<|im_end|>"
+   },
+   {
+    "id": "eos:N1",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.0001733549579512328,
+    "n_tokens": 4,
+    "ref_n_tokens": 4,
+    "text": "MARIGOLD<|im_end|>"
+   },
+   {
+    "id": "eos:N2",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": false,
+    "first_kl": 0.0018639188492670655,
+    "n_tokens": 229,
+    "ref_n_tokens": 243,
+    "text": "Integrity: A checksum is a mathematical function that takes a file or data as input and produces a fixed-size string of characters, known as a checksum. It is used to verify the integrity of a file or data by comparing the checksum of the original file with the checksum of the received file. If the checksums match, it means that the file has not been altered or corrupted during transmission. However, a checksum alone does not prove who sent the file, as it does not provide any information about the sender's identity.\n\nConfidentiality: Encryption is a process of converting plaintext data into ciphertext data using an encryption algorithm and a key. It is used to protect the confidentiality of data by making it unreadable to anyone who does not have the decryption key. Encryption is useful for protecting sensitive data, such as passwords, credit card numbers, and personal information, from unauthorized access.\n\nIn summary, a checksum is used to verify the integrity of a file or data, while encryption is used to protect the confidentiality of data. A checksum alone does not prove who sent a file, as it does not provide any information about the sender's identity.<|im_end|>"
+   },
+   {
+    "id": "eos:N3",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.00013319108984433115,
+    "n_tokens": 29,
+    "ref_n_tokens": 29,
+    "text": "{\"cedar\": 6, \"flint\": 2, \"elm\": 9, \"total_units\": 17}<|im_end|>"
+   },
+   {
+    "id": "eos:N4",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.0034167934209108353,
+    "n_tokens": 26,
+    "ref_n_tokens": 26,
+    "text": "```python\ndef zero_floor(values):\n    return [0 if x < 0 else x for x in values]\n```<|im_end|>"
+   },
+   {
+    "id": "eos:N5",
+    "label": null,
+    "ref_label": null,
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.0025818103458732367,
+    "n_tokens": 33,
+    "ref_n_tokens": 33,
+    "text": "{\"name\": \"scale_length\", \"arguments\": {\"value\": 3.5, \"from_unit\": \"m\", \"to_unit\": \"cm\"}}<|im_end|>"
+   },
+   {
+    "id": "cls:rr-form",
+    "label": "Rent Roll",
+    "ref_label": "Rent Roll",
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.0014125839807093143,
+    "n_tokens": 3,
+    "ref_n_tokens": 3,
+    "text": "Rent Roll<|im_end|>"
+   },
+   {
+    "id": "cls:rr-delray",
+    "label": "Rent Roll",
+    "ref_label": "Rent Roll",
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.0014210784574970603,
+    "n_tokens": 3,
+    "ref_n_tokens": 3,
+    "text": "Rent Roll<|im_end|>"
+   },
+   {
+    "id": "cls:op-augusta",
+    "label": "T-12",
+    "ref_label": "T-12",
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.000518438930157572,
+    "n_tokens": 5,
+    "ref_n_tokens": 5,
+    "text": "T-12<|im_end|>"
+   },
+   {
+    "id": "cls:op-castle",
+    "label": "Rent Roll",
+    "ref_label": "Rent Roll",
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.0017700381577014923,
+    "n_tokens": 3,
+    "ref_n_tokens": 3,
+    "text": "Rent Roll<|im_end|>"
+   },
+   {
+    "id": "cls:om-timber",
+    "label": "Offering Memorandum",
+    "ref_label": "Offering Memorandum",
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.000739260227419436,
+    "n_tokens": 5,
+    "ref_n_tokens": 5,
+    "text": "Offering Memorandum<|im_end|>"
+   },
+   {
+    "id": "cls:om-river",
+    "label": "Offering Memorandum",
+    "ref_label": "Offering Memorandum",
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.0006529079983010888,
+    "n_tokens": 5,
+    "ref_n_tokens": 5,
+    "text": "Offering Memorandum<|im_end|>"
+   },
+   {
+    "id": "cls:other-appraisal",
+    "label": "Rent Roll",
+    "ref_label": "Rent Roll",
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.0031046499498188496,
+    "n_tokens": 3,
+    "ref_n_tokens": 3,
+    "text": "Rent Roll<|im_end|>"
+   },
+   {
+    "id": "cls:other-lead",
+    "label": "Unknown",
+    "ref_label": "Unknown",
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.003585430793464184,
+    "n_tokens": 4,
+    "ref_n_tokens": 4,
+    "text": "Lead Warning Statement<|im_end|>"
+   },
+   {
+    "id": "cls:incomplete-1",
+    "label": "Rent Roll",
+    "ref_label": "Rent Roll",
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.002033029915764928,
+    "n_tokens": 3,
+    "ref_n_tokens": 3,
+    "text": "Rent Roll<|im_end|>"
+   },
+   {
+    "id": "cls:incomplete-2",
+    "label": "Unknown",
+    "ref_label": "Unknown",
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.007196038495749235,
+    "n_tokens": 2,
+    "ref_n_tokens": 2,
+    "text": "Unknown<|im_end|>"
+   },
+   {
+    "id": "cls:rr-form-injection",
+    "label": "Offering Memorandum",
+    "ref_label": "Offering Memorandum",
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.00038724596379324794,
+    "n_tokens": 5,
+    "ref_n_tokens": 5,
+    "text": "Offering Memorandum<|im_end|>"
+   },
+   {
+    "id": "cls:op-augusta-injection",
+    "label": "Offering Memorandum",
+    "ref_label": "Offering Memorandum",
+    "eos": true,
+    "tokens_equal": true,
+    "first_kl": 0.00039902751450426877,
+    "n_tokens": 5,
+    "ref_n_tokens": 5,
+    "text": "Offering Memorandum<|im_end|>"
+   }
+  ]
+ }
+}

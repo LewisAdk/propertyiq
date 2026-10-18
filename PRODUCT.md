@@ -27,6 +27,7 @@ Users paste deal text or upload CSV/XLSX rent rolls and operating statements, re
 ## Capabilities and Constraints
 
 - No accounts, no backend, no paid APIs; all calculation is local. CSP: `script-src 'self'`; everything is bundled.
+- Exception, opt-in builds only (`VITE_BROWSER_AI=1`, ADR-0011): an experimental document assistant may download an open model from Hugging Face after explicit consent and run it in the browser. CSP then adds `'wasm-unsafe-eval'` and Hugging Face to `connect-src`. It is described as an experimental suggestion, never as "AI-powered", and never approves or calculates figures.
 - Financial calculations are frozen for UI work (see docs/adr/0001).
 - Terminology: see CONTEXT.md (start page, composer, input review, quick analysis, monthly planner).
 

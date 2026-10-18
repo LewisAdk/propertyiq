@@ -1,0 +1,8 @@
+Field,Value,Unit,Period Start,Period End
+gross potential rent,96000,USD/year,2025-01-01,2025-12-31
+vacancy rate,5,percent,2025-01-01,2025-12-31
+credit loss rate,0,fraction,2025-01-01,2025-12-31
+concessions,0,USD/year,2025-01-01,2025-12-31
+other income,2400,USD/year,2025-01-01,2025-12-31
+expense:operations,31200,USD/year,2025-01-01,2025-12-31
+management fee,0,USD/year,2025-01-01,2025-12-31

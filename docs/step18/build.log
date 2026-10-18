@@ -1,0 +1,42 @@
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 1668 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/assets/xlsx-DPBb5Wx7.js                    0.61 kB
+dist/assets/xlsx-Cpz_K9bD.js                    0.61 kB
+dist/index.html                                 2.51 kB │ gzip:   0.79 kB
+dist/assets/browser-BQaMjc5W.js                15.18 kB
+dist/assets/benchmark.worker-DCf5Ddu_.js       21.57 kB
+dist/assets/import.worker-D2aBv76D.js          21.65 kB
+dist/assets/risk.worker-Cpz2QSef.js            28.15 kB
+dist/assets/index-Bvt8ih8y.js                 118.84 kB
+dist/assets/index-D-BVCkXC.css                129.03 kB │ gzip:  20.82 kB
+dist/assets/benchmark-Bw7ADo5o.js               1.40 kB │ gzip:   0.80 kB
+dist/assets/CocByYear-D5E25Fsz.js               1.45 kB │ gzip:   0.64 kB
+dist/assets/Charts-Bpj2CoMT.js                  1.96 kB │ gzip:   0.82 kB
+dist/assets/CalendarPanel-C_wvmkZe.js           2.98 kB │ gzip:   1.39 kB
+dist/assets/ActualsPanel-DW7B30GE.js            3.90 kB │ gzip:   1.60 kB
+dist/assets/PropertyReport-D7R_bS4P.js          4.36 kB │ gzip:   1.71 kB
+dist/assets/SourcesPanel-ETEh-dGJ.js            5.31 kB │ gzip:   2.47 kB
+dist/assets/Report-DsNVnekI.js                  6.04 kB │ gzip:   2.41 kB
+dist/assets/DiligencePanel-D6kPbmGE.js          6.15 kB │ gzip:   2.35 kB
+dist/assets/ReturnsPanel-C7WoYp31.js            6.24 kB │ gzip:   2.10 kB
+dist/assets/UnitEditor-lcdqiXwK.js              6.38 kB │ gzip:   2.55 kB
+dist/assets/FinanceEditor-Crd2Psuf.js           7.20 kB │ gzip:   2.68 kB
+dist/assets/RiskPanel-CWg3YgJL.js               7.31 kB │ gzip:   2.84 kB
+dist/assets/PortfolioPanel-et1W7Euj.js          7.67 kB │ gzip:   2.86 kB
+dist/assets/DecisionsPanel-Bdl_ID0H.js          7.85 kB │ gzip:   2.68 kB
+dist/assets/Sensitivity-D7nG9Y9s.js             8.06 kB │ gzip:   2.91 kB
+dist/assets/ReconciliationPanel-Grhj1cgJ.js     8.62 kB │ gzip:   3.38 kB
+dist/assets/OperatingDetailPanel-zbX7W3dV.js    8.93 kB │ gzip:   3.29 kB
+dist/assets/BudgetEditor-PNwl32mM.js           10.86 kB │ gzip:   3.53 kB
+dist/assets/ImportRentRoll-DhRN-741.js         12.12 kB │ gzip:   4.63 kB
+dist/assets/FinancialChart-DcyHaEu5.js         12.51 kB │ gzip:   5.14 kB
+dist/assets/ImportPanel-DRfM5kQW.js            13.10 kB │ gzip:   5.16 kB
+dist/assets/decisionAnalytics-BMSfKv8C.js      13.21 kB │ gzip:   5.48 kB
+dist/assets/DecisionLab-C-oV3vVQ.js            17.98 kB │ gzip:   6.33 kB
+dist/assets/VisualAdditions-V6TqlNiO.js        35.38 kB │ gzip:  12.45 kB
+dist/assets/AdvancedWorkspace-DaBAs6DJ.js      36.60 kB │ gzip:  12.83 kB
+dist/assets/index-BO046a2o.js                 360.99 kB │ gzip: 114.58 kB
+✓ built in 5.61s

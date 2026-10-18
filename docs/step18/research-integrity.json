@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "files_checked": 3741,
+  "changed": [],
+  "removed": [],
+  "added": [],
+  "dev_base_matches_original": true,
+  "venv_inventory_unchanged": true,
+  "repaired_adapter_sha256": "a2b503e3b3c67ea996f74a0b682cf23d6dbd0f1179586fb11d3bdaae8f31dc0d",
+  "source_adapter_sha256": "6e197aaf9b2aaa74e9ceaa64fa0e258bd880e1332060065d5511514643aecf60",
+  "base_revision": "ea980cb0a6c2ae4b936e82123acc929f1cec04c1",
+  "lineage": "Pinned Qwen3-1.7B-Base -> completed 752-step conversational LoRA -> four tied token rows repaired for 32 steps",
+  "physical_free_gib": 21.98792266845703
+}
