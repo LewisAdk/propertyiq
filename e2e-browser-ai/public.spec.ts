@@ -6,9 +6,11 @@ import { join } from "node:path";
 // The published release, end to end, in a brand-new browser profile: no local model
 // server. Build first with the public variables (docs/step18-2/HUGGINGFACE_RELEASE.md §5).
 // Run: playwright test -c playwright.browser-ai.config.ts --project=public
-const APP = "http://127.0.0.1:4198";
+const APP = process.env.PIQ_APP_URL ?? "http://127.0.0.1:4198";
 const HF = /^https:\/\/(huggingface\.co|[^/]+\.hf\.co)\//;
-const RESULTS = "docs/step18-2/public-release-results.json";
+const RESULTS = process.env.PIQ_APP_URL
+  ? "docs/step18-2/preview-results.json"
+  : "docs/step18-2/public-release-results.json";
 const results: Record<string, unknown> = existsSync(RESULTS)
   ? JSON.parse(readFileSync(RESULTS, "utf8"))
   : {};

@@ -1,6 +1,6 @@
 # Hugging Face release: PropertyIQ research Qwen3-1.7B (browser build)
 
-Status: **Model published with your approval (2026-10-18), verified from a clean browser.** The GitHub branch is not pushed and no Cloudflare preview or production change has been made.
+Status: **C, preview verified; ready for your production approval.** The model is published (`bb21176a`), the branch is pushed and its Cloudflare preview passes end to end. Production is unchanged.
 
 ## 1. GitHub
 - Branch `step18/ai-integration`, local commit `38369b1` (author: Lewis Adkins, noreply). Based on `origin/main` `5331fc2`, which is current. **Not pushed**: GitHub CLI isn't logged in, and pushing waits for your OK.
@@ -62,6 +62,12 @@ Status: **Model published with your approval (2026-10-18), verified from a clean
 - First visit: nothing contacts Hugging Face before consent. Consent, then download (2.17 GB incl. runtime) and load took **53.5 s** on this connection. 18 Hugging Face requests, no other hosts, no console errors. **12/12** labels equal the FP16 reference (6/12 vs expected, as before). The full workflow (upload → model suggestion → confirm T-12 → review with a correction → approve → calculate) gave **$62,500.00**.
 - Return visit with the internet blocked: loaded from browser storage in **5.8 s**, suggestion in 0.5 s, **0 network requests** outside the app. The weights and the runtime file are both reused from Cache Storage.
 - Fixed during this test: an empty Transformers.js path template produced `//` URLs. The runtime file is now cached because the CDN signs and expires its URLs.
+
+**Cloudflare preview** https://step18-ai-integration.propertyiq.pages.dev (branch pushed by you; `preview-results.json`):
+- Response CSP is exactly the flagged policy (`'wasm-unsafe-eval'`, `connect-src 'self' https://huggingface.co https://*.hf.co`). Production `propertyiq.pages.dev` still serves the strict default CSP.
+- The worker bundle pins commit `bb21176a`. No `.wasm` is deployed to Pages; the runtime comes from the release.
+- Clean profile: download plus load took **79.9 s**; 18 Hugging Face requests, no other hosts, 0 console errors; **12/12** labels equal FP16; the full workflow reached **$62,500.00**.
+- Return visit with the internet blocked: **5.2 s** from browser storage, 0 network requests.
 
 Earlier evidence:
 - The Hugging Face listing API is readable cross-origin from the app, and its LFS hashes match what this check expects (tested on the generic model).
