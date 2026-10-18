@@ -63,4 +63,4 @@ pnpm test:e2e
 - Projects are stored locally; clearing browser data removes them. Export backups before changing devices.
 - Chromium, Firefox and Playwright WebKit pass desktop and narrow-screen checks. These are automated browser tests, not physical-device certification. Actual Cloudflare response headers still require deployment checks.
 
-[Methodology](METHODOLOGY.md) · [Deployment](DEPLOYMENT.md) · [Reconciliation](RECONCILIATION.md) · [Changelog](CHANGELOG.md) · [Contact](mailto:abc@gmail.com)
+[Methodology](METHODOLOGY.md) · [Deployment](DEPLOYMENT.md) · [Reconciliation](RECONCILIATION.md) · [Changelog](CHANGELOG.md) · [Contact](mailto:abc@gmail.com) · [License (MIT)](LICENSE)
