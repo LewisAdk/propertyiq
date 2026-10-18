@@ -1,0 +1,16 @@
+{
+  "ok": true,
+  "files_checked": 3741,
+  "changed": [],
+  "removed": [],
+  "added": [],
+  "dev_base_matches_original": true,
+  "venv_inventory_unchanged": true,
+  "repaired_adapter_sha256": "a2b503e3b3c67ea996f74a0b682cf23d6dbd0f1179586fb11d3bdaae8f31dc0d",
+  "source_adapter_sha256": "6e197aaf9b2aaa74e9ceaa64fa0e258bd880e1332060065d5511514643aecf60",
+  "physical_free_gib": 22.020244598388672,
+  "ai_git_head": "a18c5d0a7e68eecaaa5d79446adb381a0778432e",
+  "ai_git_stash": [
+    "b145e41a0b868f489ec1c4ef7b6a9feb2d336792"
+  ]
+}

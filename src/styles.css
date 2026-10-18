@@ -6779,3 +6779,12 @@ button.theme-toggle[role="switch"]:hover {
     scroll-behavior: auto !important;
   }
 }
+/* Development-only local prototype; model text is rendered as plain text. */
+.local-ai { position: fixed; right: 1rem; bottom: 1rem; z-index: 1000; padding: 1rem; width: min(42rem, calc(100% - 2rem)); max-height: 90dvh; overflow: auto; border: 1px solid var(--color-border); border-radius: var(--radius-panel); background: var(--color-surface); box-shadow: 0 8px 32px var(--color-shadow-deep); }
+.local-ai summary { cursor: pointer; font-weight: 600; }
+.local-ai label { display: block; margin: .75rem 0; }
+.local-ai textarea { display: block; width: 100%; max-width: 100%; }
+.local-ai-output { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 30rem; overflow: auto; }
+.local-ai { overflow-wrap: anywhere; }
+.local-ai fieldset { min-width: 0; }
+.local-ai input, .local-ai select { max-width: 100%; }

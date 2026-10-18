@@ -1,0 +1,158 @@
+{
+  "files": [
+    {
+      "sha256": "4CAF7DD18F52CD5B5DED68127D176E6687B4AF623DE457B219C170235896078C",
+      "path": "docs/screenshots/capital-recovery-mobile.png"
+    },
+    {
+      "sha256": "3ACB4547F3FB13836CD87E68AA045FF4360FF0F37FA5EBFD94C7B7A599C583F5",
+      "path": "docs/screenshots/monthly-accessible-desktop.png"
+    },
+    {
+      "sha256": "68CDCAF6714FAB1206C8E0B7301F7F752D862C97EE5F97960539C1B3B94A9AB2",
+      "path": "docs/screenshots/monthly-accessible-firefox-desktop.png"
+    },
+    {
+      "sha256": "9BBDEE580D31A37DED37381268D63C38D3B1EBE35226EE6223498CD82E7D2287",
+      "path": "docs/screenshots/monthly-accessible-firefox-mobile.png"
+    },
+    {
+      "sha256": "921E69B7DA46AC3B787C03C9B9D96593F8223F406B5EE0E5AB920262CFED33CE",
+      "path": "docs/screenshots/monthly-accessible-mobile.png"
+    },
+    {
+      "sha256": "1721CB6B65E7D220D0274A7A499C29FBF200B0961BBA413B90689BA7B7B3AAC1",
+      "path": "docs/screenshots/monthly-accessible-webkit-desktop.png"
+    },
+    {
+      "sha256": "CE358C1EB5659D615BD995AB1F02BCCA39923C8DC867EAA85304836C426B3885",
+      "path": "docs/screenshots/monthly-accessible-webkit-mobile.png"
+    },
+    {
+      "sha256": "CD6448ED1D83C96A91E207D20FF06B3AAE5374EAD683BA776A861377953BF406",
+      "path": "docs/screenshots/monthly-desktop.png"
+    },
+    {
+      "sha256": "C6559303B2F78E68AF1E20A866D6038EDE2F48D07610A13661ABB387A8439931",
+      "path": "docs/screenshots/monthly-firefox-desktop.png"
+    },
+    {
+      "sha256": "B9C4EE668E10C89F8AB5BD2C91D7A56DC0F15E0A10F7852E603967C4CEE43B6C",
+      "path": "docs/screenshots/monthly-firefox-mobile.png"
+    },
+    {
+      "sha256": "B676BEC5C9E0F7C2E9ACC99D5023310DFF831980F468D908E92B7E280711D3B0",
+      "path": "docs/screenshots/monthly-mobile.png"
+    },
+    {
+      "sha256": "5299ED2F7ECC35F392AA91501BE7897B141F0F0A5AFF80BCDF349DD9F26FF84B",
+      "path": "docs/screenshots/monthly-webkit-desktop.png"
+    },
+    {
+      "sha256": "4B528E6B2EC78F15EF262722C1396E2233720BA406D856344524A681728F8F3F",
+      "path": "docs/screenshots/monthly-webkit-mobile.png"
+    },
+    {
+      "sha256": "C430F7CBEE49EF78B6584C142BFDB0C546B9D9759956EA71D0441B738CC6FE35",
+      "path": "docs/screenshots/quick-desktop.png"
+    },
+    {
+      "sha256": "813007E384D67ED272DDE599B6895CCB62B4286FEE733AC9E561003134B42601",
+      "path": "docs/screenshots/quick-firefox-desktop.png"
+    },
+    {
+      "sha256": "A88F10AD581750BCECA343F77297D0E10831CBD162863E838154A0C89BAB3ADA",
+      "path": "docs/screenshots/quick-firefox-mobile.png"
+    },
+    {
+      "sha256": "BB6FBD559FF234F9577C165620519E8B0C4FE2D249E1DDFAB96FA59DD6A5C456",
+      "path": "docs/screenshots/quick-mobile.png"
+    },
+    {
+      "sha256": "9264AA57BB16B59DB33D7139C9A98955B38AD093C8C13CC817B7D301385A9B9B",
+      "path": "docs/screenshots/quick-webkit-desktop.png"
+    },
+    {
+      "sha256": "FDDC74E3A5C683A4251697456DA6BF8E13EE38A3C1B87A03C717B33817126295",
+      "path": "docs/screenshots/quick-webkit-mobile.png"
+    },
+    {
+      "sha256": "0C71045CC06970A8E52B64AE05544D639041537105A37089EC02C39C134604EF",
+      "path": "docs/screenshots/report-desktop.png"
+    },
+    {
+      "sha256": "694A73DC28E43DB34D1D75CB347387BD6B21BB961E3FE1F079F8BA6FA219B7E5",
+      "path": "docs/screenshots/report-firefox-desktop.png"
+    },
+    {
+      "sha256": "1225289D1FB6DBA869536CE69CF722AC40519ADCEB8B2EDA46111721B91397D3",
+      "path": "docs/screenshots/report-firefox-mobile.png"
+    },
+    {
+      "sha256": "E2D90E299E26B22516F19B3C25ADA7BA120ED36A0203863064990AB4A459CE44",
+      "path": "docs/screenshots/report-mobile.png"
+    },
+    {
+      "sha256": "30CA5F9FC62A1C86E266F9EB24DA9E4CAEDFA2B250F81F7A4FF29B8312D3B67E",
+      "path": "docs/screenshots/report-print-desktop.png"
+    },
+    {
+      "sha256": "1F919E48C50F126213E537F2E78CE05AFD102C0B109513C2B018471D88A0EAEE",
+      "path": "docs/screenshots/report-webkit-desktop.png"
+    },
+    {
+      "sha256": "A9DF08D0360869B85558B9016110AD67A0926D240F30068C3BD7BC3FC26C7034",
+      "path": "docs/screenshots/report-webkit-mobile.png"
+    },
+    {
+      "sha256": "012DEAC79856539D92CA2B5F518EDE8E5A6ADAACBF5DD2635D5D1DE3B3C80C1F",
+      "path": "docs/screenshots/setup-desktop.png"
+    },
+    {
+      "sha256": "262AAF3E54C65E6B613D87514232ACDDDA87C9E31CC6A00560405C8CC63C9F88",
+      "path": "docs/screenshots/start-desktop.png"
+    },
+    {
+      "sha256": "345441480F9E012F282A115D5D1EC11C0A000B3649D5F0721EB4E31CA425FF8A",
+      "path": "docs/screenshots/start-firefox-desktop.png"
+    },
+    {
+      "sha256": "B6A2ECB9418453AF49913652C012322CCBEF5D6445B9D0EA2569E988BBC83AD8",
+      "path": "docs/screenshots/start-firefox-mobile.png"
+    },
+    {
+      "sha256": "6B4323668876576C533B25EC7EE3E06D3A710C19AA74A4AEBA95F84BEAFC49B5",
+      "path": "docs/screenshots/start-mobile.png"
+    },
+    {
+      "sha256": "9770F9A9C60F7E51BFF324DE6AAC07EDDAFC1DD2E45C90307D13A7C14693085D",
+      "path": "docs/screenshots/start-webkit-desktop.png"
+    },
+    {
+      "sha256": "352E9A8A67039AD120AEEC5E4DD048A3154BEA9E2447B12DABEC056B0AEB6C6C",
+      "path": "docs/screenshots/start-webkit-mobile.png"
+    },
+    {
+      "sha256": "5F87A271FBFCD3049895A7DC662218B948CB95F8078ED17DF9A818E3A394CB88",
+      "path": "docs/verification/capital-recovery-mobile.svg"
+    },
+    {
+      "sha256": "043F2ADFDFABF49AAB3EA528FBB64B9A05A8C87F44D4020D506D708C4DC9FC38",
+      "path": "docs/verification/monthly-ten-year-brief.pdf"
+    },
+    {
+      "sha256": "65CB5A0FB6B85AFB84A543EBDC64B37906F956F9E5E59213BB888F2B20A32AE3",
+      "path": "docs/verification/quick-investment-brief.pdf"
+    },
+    {
+      "sha256": "89B7B3E6FD4B44A5B75E19769D7CBCAA94EFDA3A1F623FC476E31AD640503084",
+      "path": "docs/next-release-prompt.md"
+    },
+    {
+      "sha256": "6DF1063A8F6F7EAB8EAED9A63678650C08A74B5B30EF2D8F2FDE2B8E2098FEDD",
+      "path": "public/social/propertyiq-preview-v6.png"
+    }
+  ],
+  "stash": [],
+  "head": "5331fc2780c323d63fc897b49e081daab11e70e0"
+}

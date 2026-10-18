@@ -1,0 +1,14 @@
+{
+  "openwebui": {
+    "status": true
+  },
+  "calculator": {
+    "status": "ok",
+    "service": "realestate-calculators",
+    "spec_version": "1.5",
+    "api_version": "1.5.0",
+    "read_only": true
+  },
+  "ollama_4b_digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+  "checkpoint_752_manifest_unchanged": true
+}

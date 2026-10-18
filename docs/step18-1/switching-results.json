@@ -1,0 +1,404 @@
+{
+  "samples": [
+    {
+      "time": 1792285190.4624789,
+      "mib": [
+        522,
+        7466,
+        8192
+      ]
+    },
+    {
+      "time": 1792285191.0027425,
+      "mib": [
+        523,
+        7465,
+        8192
+      ]
+    },
+    {
+      "time": 1792285191.5402677,
+      "mib": [
+        685,
+        7303,
+        8192
+      ]
+    },
+    {
+      "time": 1792285192.0858147,
+      "mib": [
+        685,
+        7303,
+        8192
+      ]
+    },
+    {
+      "time": 1792285192.6290917,
+      "mib": [
+        685,
+        7303,
+        8192
+      ]
+    },
+    {
+      "time": 1792285193.1708431,
+      "mib": [
+        680,
+        7308,
+        8192
+      ]
+    },
+    {
+      "time": 1792285193.719057,
+      "mib": [
+        672,
+        7316,
+        8192
+      ]
+    },
+    {
+      "time": 1792285194.26122,
+      "mib": [
+        640,
+        7348,
+        8192
+      ]
+    },
+    {
+      "time": 1792285194.8025105,
+      "mib": [
+        640,
+        7348,
+        8192
+      ]
+    },
+    {
+      "time": 1792285195.3457572,
+      "mib": [
+        685,
+        7303,
+        8192
+      ]
+    },
+    {
+      "time": 1792285195.8889143,
+      "mib": [
+        685,
+        7303,
+        8192
+      ]
+    },
+    {
+      "time": 1792285196.4470193,
+      "mib": [
+        3057,
+        4931,
+        8192
+      ]
+    },
+    {
+      "time": 1792285196.99722,
+      "mib": [
+        3445,
+        4543,
+        8192
+      ]
+    },
+    {
+      "time": 1792285197.5918736,
+      "mib": [
+        3434,
+        4554,
+        8192
+      ]
+    },
+    {
+      "time": 1792285198.1378088,
+      "mib": [
+        3447,
+        4541,
+        8192
+      ]
+    },
+    {
+      "time": 1792285198.6829336,
+      "mib": [
+        3415,
+        4573,
+        8192
+      ]
+    },
+    {
+      "time": 1792285199.2322032,
+      "mib": [
+        3458,
+        4530,
+        8192
+      ]
+    },
+    {
+      "time": 1792285199.7908468,
+      "mib": [
+        3457,
+        4531,
+        8192
+      ]
+    },
+    {
+      "time": 1792285200.339736,
+      "mib": [
+        3459,
+        4529,
+        8192
+      ]
+    },
+    {
+      "time": 1792285200.8869798,
+      "mib": [
+        3459,
+        4529,
+        8192
+      ]
+    },
+    {
+      "time": 1792285201.44099,
+      "mib": [
+        3448,
+        4540,
+        8192
+      ]
+    },
+    {
+      "time": 1792285201.988763,
+      "mib": [
+        3447,
+        4541,
+        8192
+      ]
+    },
+    {
+      "time": 1792285202.540926,
+      "mib": [
+        3417,
+        4571,
+        8192
+      ]
+    },
+    {
+      "time": 1792285203.0804546,
+      "mib": [
+        3415,
+        4573,
+        8192
+      ]
+    },
+    {
+      "time": 1792285203.7199001,
+      "mib": [
+        3456,
+        4532,
+        8192
+      ]
+    },
+    {
+      "time": 1792285204.2669291,
+      "mib": [
+        3455,
+        4533,
+        8192
+      ]
+    },
+    {
+      "time": 1792285204.8141098,
+      "mib": [
+        3455,
+        4533,
+        8192
+      ]
+    },
+    {
+      "time": 1792285205.3851752,
+      "mib": [
+        3437,
+        4551,
+        8192
+      ]
+    },
+    {
+      "time": 1792285205.959703,
+      "mib": [
+        3438,
+        4550,
+        8192
+      ]
+    },
+    {
+      "time": 1792285206.5370195,
+      "mib": [
+        3405,
+        4583,
+        8192
+      ]
+    },
+    {
+      "time": 1792285207.1128309,
+      "mib": [
+        3406,
+        4582,
+        8192
+      ]
+    },
+    {
+      "time": 1792285207.6647246,
+      "mib": [
+        3448,
+        4540,
+        8192
+      ]
+    },
+    {
+      "time": 1792285208.2302396,
+      "mib": [
+        3442,
+        4546,
+        8192
+      ]
+    },
+    {
+      "time": 1792285208.7930565,
+      "mib": [
+        3442,
+        4546,
+        8192
+      ]
+    },
+    {
+      "time": 1792285209.337042,
+      "mib": [
+        3429,
+        4559,
+        8192
+      ]
+    },
+    {
+      "time": 1792285209.8815987,
+      "mib": [
+        3429,
+        4559,
+        8192
+      ]
+    },
+    {
+      "time": 1792285210.422231,
+      "mib": [
+        3397,
+        4591,
+        8192
+      ]
+    },
+    {
+      "time": 1792285211.060935,
+      "mib": [
+        3395,
+        4593,
+        8192
+      ]
+    }
+  ],
+  "checks": [
+    "GPU request refused with resident model",
+    "CPU fallback worked with the original 4B resident and unchanged expiry",
+    "Concurrent local request rejected with JSON 409",
+    "4B remained available after CPU fallback"
+  ],
+  "first_4b": {
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "text": "Extracted financial figures require human review because they may contain errors, inconsistencies, or context missing from automated processes, and human judgment is essential to validate accuracy and ensure alignment with business realities.",
+    "load_seconds": 6.590550214,
+    "generation_seconds": 0.467308,
+    "tokens": 38,
+    "verified_calculation": false,
+    "wall_seconds": 7.259347430001071
+  },
+  "resident_before_cpu": {
+    "models": [
+      {
+        "name": "qwen3:4b-instruct-2507-q4_K_M",
+        "model": "qwen3:4b-instruct-2507-q4_K_M",
+        "size": 2876160081,
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-17T20:04:57.625608868-05:00",
+        "size_vram": 2876160081,
+        "context_length": 2048,
+        "runner": "llamacpp"
+      }
+    ]
+  },
+  "gpu_busy": {
+    "error": "GPU busy: an Ollama model is resident. Select CPU fallback or retry after its normal idle timeout; your assistant will not be unloaded."
+  },
+  "concurrent_rejection": {
+    "error": "Local AI busy; another request is running. Retry when it finishes."
+  },
+  "cpu_with_4b_resident": {
+    "rows": [
+      {
+        "raw": "Rent Roll",
+        "eos": true,
+        "tokens": 3,
+        "seconds": 4.18,
+        "label": "Rent Roll",
+        "valid": true
+      }
+    ],
+    "device": "cpu",
+    "load_seconds": 2.057,
+    "peak_allocated_gib": 0,
+    "adapter": "/home/lewis/conv-dev/runs/token_row_repair_01/adapter_final",
+    "wall_seconds": 12.485820559002605
+  },
+  "resident_after_cpu": {
+    "models": [
+      {
+        "name": "qwen3:4b-instruct-2507-q4_K_M",
+        "model": "qwen3:4b-instruct-2507-q4_K_M",
+        "size": 2876160081,
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-17T20:04:57.625608868-05:00",
+        "size_vram": 2876160081,
+        "context_length": 2048,
+        "runner": "llamacpp"
+      }
+    ]
+  },
+  "second_4b": {
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "text": "An operating statement summarizes a property\u2019s financial performance over a period, including income, expenses, and net operating income (NOI). It reflects the overall financial health of the property.\n\nA rent roll is a detailed list of individual tenants, their lease terms, rental amounts, and due dates. It shows the expected rental income from each unit or tenant.\n\nIn short: the operating statement provides an overall financial summary, while the rent roll lists specific tenant rental details.",
+    "load_seconds": 0.000888406,
+    "generation_seconds": 1.157533,
+    "tokens": 93,
+    "verified_calculation": false,
+    "wall_seconds": 1.2104803709989937
+  },
+  "peak_device_used_mib": 3459
+}

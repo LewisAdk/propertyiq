@@ -12,3 +12,13 @@ playwright-report/
 *.key
 
 .impeccable/review/
+.cache/
+__pycache__/
+
+# Model artifacts and credentials never belong in this repo (weights live on Hugging Face).
+*.onnx
+*.onnx_data
+*.safetensors
+*.gguf
+.huggingface/
+hf_token*

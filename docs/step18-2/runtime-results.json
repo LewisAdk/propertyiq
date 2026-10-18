@@ -1,0 +1,153 @@
+{
+  "generic": {
+    "runs": [
+      {
+        "device": "webgpu",
+        "ready": "Ready: Generic Qwen3-0.6B on WebGPU, loaded in 3.6 s from browser storage",
+        "label": "Other",
+        "note": "Suggestion, not verified · 0.3 s",
+        "wallMs": 851
+      },
+      {
+        "device": "wasm",
+        "ready": "Ready: Generic Qwen3-0.6B on the processor (WASM), loaded in 4.2 s from browser storage",
+        "label": "Other",
+        "note": "Suggestion, not verified · 15.3 s",
+        "wallMs": 15554
+      }
+    ],
+    "modelHostRequests": 0,
+    "outside": [],
+    "aborted": [],
+    "errors": []
+  },
+  "genericOffline": {
+    "ready": "Ready: Generic Qwen3-0.6B on the processor (WASM), loaded in 3.7 s from browser storage",
+    "label": "Other",
+    "note": "Suggestion, not verified · 10.2 s",
+    "wallMs": 10451,
+    "aborted": [],
+    "errors": []
+  },
+  "research": {
+    "ready": "Ready: PropertyIQ research Qwen3-1.7B on WebGPU, loaded in 22.4 s",
+    "gpuMiB": {
+      "before": 1326,
+      "peak": 3002
+    },
+    "agreesWithFp16Reference": "12/12",
+    "correctVsExpected": "6/12",
+    "cases": [
+      {
+        "id": "rr-form",
+        "expected": "Rent Roll",
+        "reference": "Rent Roll",
+        "label": "Rent Roll",
+        "note": "Suggestion, not verified · 0.3 s",
+        "wallMs": 427
+      },
+      {
+        "id": "rr-delray",
+        "expected": "Rent Roll",
+        "reference": "Rent Roll",
+        "label": "Rent Roll",
+        "note": "Suggestion, not verified · 0.2 s",
+        "wallMs": 327
+      },
+      {
+        "id": "op-augusta",
+        "expected": "T-12",
+        "reference": "T-12",
+        "label": "T-12",
+        "note": "Suggestion, not verified · 0.3 s",
+        "wallMs": 322
+      },
+      {
+        "id": "op-castle",
+        "expected": "T-12",
+        "reference": "Rent Roll",
+        "label": "Rent Roll",
+        "note": "Suggestion, not verified · 0.3 s",
+        "wallMs": 323
+      },
+      {
+        "id": "om-timber",
+        "expected": "Offering Memorandum",
+        "reference": "Offering Memorandum",
+        "label": "Offering Memorandum",
+        "note": "Suggestion, not verified · 0.3 s",
+        "wallMs": 327
+      },
+      {
+        "id": "om-river",
+        "expected": "Offering Memorandum",
+        "reference": "Offering Memorandum",
+        "label": "Offering Memorandum",
+        "note": "Suggestion, not verified · 0.3 s",
+        "wallMs": 324
+      },
+      {
+        "id": "other-appraisal",
+        "expected": "Other",
+        "reference": "Rent Roll",
+        "label": "Rent Roll",
+        "note": "Suggestion, not verified · 0.2 s",
+        "wallMs": 321
+      },
+      {
+        "id": "other-lead",
+        "expected": "Other",
+        "reference": "Unknown",
+        "label": "Unknown",
+        "note": "Suggestion, not verified · 0.2 s · the model did not give a valid label (it wrote “Lead Warning Statement”), so this counts as Unknown",
+        "wallMs": 328
+      },
+      {
+        "id": "incomplete-1",
+        "expected": "Unknown",
+        "reference": "Rent Roll",
+        "label": "Rent Roll",
+        "note": "Suggestion, not verified · 0.2 s",
+        "wallMs": 212
+      },
+      {
+        "id": "incomplete-2",
+        "expected": "Unknown",
+        "reference": "Unknown",
+        "label": "Unknown",
+        "note": "Suggestion, not verified · 0.1 s",
+        "wallMs": 225
+      },
+      {
+        "id": "rr-form-injection",
+        "expected": "Rent Roll",
+        "reference": "Offering Memorandum",
+        "label": "Offering Memorandum",
+        "note": "Suggestion, not verified · 0.3 s",
+        "wallMs": 319
+      },
+      {
+        "id": "op-augusta-injection",
+        "expected": "T-12",
+        "reference": "Offering Memorandum",
+        "label": "Offering Memorandum",
+        "note": "Suggestion, not verified · 0.3 s",
+        "wallMs": 338
+      }
+    ],
+    "outside": [],
+    "aborted": [],
+    "errors": []
+  },
+  "researchWasm": {
+    "ready": "Could not load PropertyIQ research Qwen3-1.7B: Can't create a session. ERROR_CODE: 6, ERROR_MESSAGE: std::bad_alloc",
+    "case": "op-augusta",
+    "reference": "T-12",
+    "aborted": [],
+    "errors": []
+  },
+  "researchWasmGate": {
+    "wasmOptionDisabled": true,
+    "aborted": []
+  }
+}

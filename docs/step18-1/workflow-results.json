@@ -1,0 +1,607 @@
+{
+  "checks": [
+    {
+      "check": "Live uploaded CSV classification via explicit CPU fallback",
+      "suggestion": "Rent Roll"
+    },
+    {
+      "check": "Upload -> classify -> correct type -> extract -> correct amount -> approve -> deterministic NOI 62500 with provenance",
+      "result": {
+        "result": {
+          "calculation": "income_noi",
+          "spec_version": "1.5",
+          "inputs": {
+            "gross_potential_rent_usd_annual": "96000",
+            "vacancy_rate": "0.05",
+            "credit_loss_rate": "0",
+            "concessions_usd_annual": "0",
+            "other_income_usd_annual": "2500",
+            "operating_expenses_usd_annual": {
+              "operations": "31200"
+            },
+            "management_fee_rate_of_egi": null,
+            "management_fee_usd_annual": "0"
+          },
+          "steps": [
+            {
+              "name": "vacancy_loss",
+              "formula": "gross_potential_rent x vacancy_rate",
+              "value": {
+                "value": "4800.00",
+                "unit": "USD",
+                "rounding": "2 decimal places, half-up",
+                "unrounded": "4800.00"
+              }
+            },
+            {
+              "name": "credit_loss",
+              "formula": "gross_potential_rent x credit_loss_rate",
+              "value": {
+                "value": "0.00",
+                "unit": "USD",
+                "rounding": "2 decimal places, half-up",
+                "unrounded": "0"
+              }
+            },
+            {
+              "name": "effective_gross_income",
+              "formula": "GPR - vacancy loss - credit loss - concessions + other income",
+              "value": {
+                "value": "93700.00",
+                "unit": "USD",
+                "rounding": "2 decimal places, half-up",
+                "unrounded": "93700.00"
+              }
+            },
+            {
+              "name": "management_fee",
+              "formula": "management fee = management_fee_usd_annual (fixed)",
+              "value": {
+                "value": "0.00",
+                "unit": "USD",
+                "rounding": "2 decimal places, half-up",
+                "unrounded": "0"
+              }
+            },
+            {
+              "name": "named_operating_expenses",
+              "formula": "sum of operating_expenses_usd_annual",
+              "value": {
+                "value": "31200.00",
+                "unit": "USD",
+                "rounding": "2 decimal places, half-up",
+                "unrounded": "31200"
+              }
+            },
+            {
+              "name": "total_operating_expenses",
+              "formula": "named expenses + management fee",
+              "value": {
+                "value": "31200.00",
+                "unit": "USD",
+                "rounding": "2 decimal places, half-up",
+                "unrounded": "31200"
+              }
+            },
+            {
+              "name": "net_operating_income",
+              "formula": "EGI - total operating expenses",
+              "value": {
+                "value": "62500.00",
+                "unit": "USD",
+                "rounding": "2 decimal places, half-up",
+                "unrounded": "62500.00"
+              }
+            },
+            {
+              "name": "expense_ratio",
+              "formula": "total operating expenses / EGI (undefined if EGI = 0)",
+              "value": {
+                "value": "0.332978",
+                "unit": "fraction",
+                "rounding": "6 decimal places, half-up",
+                "unrounded": "0.3329775880469583778014941302"
+              }
+            }
+          ],
+          "results": {
+            "gross_potential_rent_usd_annual": {
+              "value": "96000.00",
+              "unit": "USD",
+              "rounding": "2 decimal places, half-up",
+              "unrounded": "96000"
+            },
+            "vacancy_loss_usd_annual": {
+              "value": "4800.00",
+              "unit": "USD",
+              "rounding": "2 decimal places, half-up",
+              "unrounded": "4800.00"
+            },
+            "credit_loss_usd_annual": {
+              "value": "0.00",
+              "unit": "USD",
+              "rounding": "2 decimal places, half-up",
+              "unrounded": "0"
+            },
+            "concessions_usd_annual": {
+              "value": "0.00",
+              "unit": "USD",
+              "rounding": "2 decimal places, half-up",
+              "unrounded": "0"
+            },
+            "other_income_usd_annual": {
+              "value": "2500.00",
+              "unit": "USD",
+              "rounding": "2 decimal places, half-up",
+              "unrounded": "2500"
+            },
+            "effective_gross_income_usd_annual": {
+              "value": "93700.00",
+              "unit": "USD",
+              "rounding": "2 decimal places, half-up",
+              "unrounded": "93700.00"
+            },
+            "management_fee_usd_annual": {
+              "value": "0.00",
+              "unit": "USD",
+              "rounding": "2 decimal places, half-up",
+              "unrounded": "0"
+            },
+            "total_operating_expenses_usd_annual": {
+              "value": "31200.00",
+              "unit": "USD",
+              "rounding": "2 decimal places, half-up",
+              "unrounded": "31200"
+            },
+            "expense_ratio": {
+              "value": "0.332978",
+              "unit": "fraction",
+              "rounding": "6 decimal places, half-up",
+              "unrounded": "0.3329775880469583778014941302"
+            },
+            "net_operating_income_usd_annual": {
+              "value": "62500.00",
+              "unit": "USD",
+              "rounding": "2 decimal places, half-up",
+              "unrounded": "62500.00"
+            }
+          },
+          "warnings": []
+        },
+        "provenance": {
+          "name": "noi-reviewed-fixture.csv",
+          "sha256": "3d1f36c52b0e130855862ef04b37333404556d8bf147bdd514b98399830456fa",
+          "sheet": "CSV",
+          "rows": [
+            {
+              "row": 2,
+              "field": "gross_potential_rent_usd_annual",
+              "value": "96000",
+              "original": "96000",
+              "unit": "USD/year",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "originalCell": {
+                "field": "gross potential rent",
+                "value": "96000",
+                "unit": "USD/year",
+                "start": "2025-01-01",
+                "end": "2025-12-31"
+              }
+            },
+            {
+              "row": 3,
+              "field": "vacancy_rate",
+              "value": "5",
+              "original": "5",
+              "unit": "percent",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "originalCell": {
+                "field": "vacancy rate",
+                "value": "5",
+                "unit": "percent",
+                "start": "2025-01-01",
+                "end": "2025-12-31"
+              }
+            },
+            {
+              "row": 4,
+              "field": "credit_loss_rate",
+              "value": "0",
+              "original": "0",
+              "unit": "fraction",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "originalCell": {
+                "field": "credit loss rate",
+                "value": "0",
+                "unit": "fraction",
+                "start": "2025-01-01",
+                "end": "2025-12-31"
+              }
+            },
+            {
+              "row": 5,
+              "field": "concessions_usd_annual",
+              "value": "0",
+              "original": "0",
+              "unit": "USD/year",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "originalCell": {
+                "field": "concessions",
+                "value": "0",
+                "unit": "USD/year",
+                "start": "2025-01-01",
+                "end": "2025-12-31"
+              }
+            },
+            {
+              "row": 6,
+              "field": "other_income_usd_annual",
+              "value": "2500",
+              "original": "2400",
+              "unit": "USD/year",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "originalCell": {
+                "field": "other income",
+                "value": "2400",
+                "unit": "USD/year",
+                "start": "2025-01-01",
+                "end": "2025-12-31"
+              }
+            },
+            {
+              "row": 7,
+              "field": "expense:operations",
+              "value": "31200",
+              "original": "31200",
+              "unit": "USD/year",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "originalCell": {
+                "field": "expense:operations",
+                "value": "31200",
+                "unit": "USD/year",
+                "start": "2025-01-01",
+                "end": "2025-12-31"
+              }
+            },
+            {
+              "row": 8,
+              "field": "management_fee_usd_annual",
+              "value": "0",
+              "original": "0",
+              "unit": "USD/year",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "originalCell": {
+                "field": "management fee",
+                "value": "0",
+                "unit": "USD/year",
+                "start": "2025-01-01",
+                "end": "2025-12-31"
+              }
+            }
+          ]
+        }
+      }
+    },
+    "Blank source value blocks preparation and clears approval/result",
+    "PDF unsupported error clears previous financial source/approval",
+    "XLSX upload uses existing worker and preserves source rows/values; manual Unknown type confirmation allowed"
+  ],
+  "responses": [
+    {
+      "url": "http://127.0.0.1:5178/api/local-ai/classify",
+      "status": 200,
+      "body": {
+        "rows": [
+          {
+            "raw": "Rent Roll",
+            "eos": true,
+            "tokens": 3,
+            "seconds": 7.072,
+            "label": "Rent Roll",
+            "valid": true
+          }
+        ],
+        "device": "cpu",
+        "load_seconds": 2.107,
+        "peak_allocated_gib": 0,
+        "peak_host_rss_gib": 10.409,
+        "adapter": "/home/lewis/conv-dev/runs/token_row_repair_01/adapter_final"
+      }
+    },
+    {
+      "url": "http://127.0.0.1:5178/api/local-ai/calculate",
+      "status": 200,
+      "body": {
+        "verified_calculation": true,
+        "tool": "income-noi",
+        "provenance": {
+          "name": "noi-reviewed-fixture.csv",
+          "sha256": "3d1f36c52b0e130855862ef04b37333404556d8bf147bdd514b98399830456fa",
+          "sheet": "CSV",
+          "rows": [
+            {
+              "row": 2,
+              "field": "gross_potential_rent_usd_annual",
+              "value": "96000",
+              "original": "96000",
+              "unit": "USD/year",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "originalCell": {
+                "field": "gross potential rent",
+                "value": "96000",
+                "unit": "USD/year",
+                "start": "2025-01-01",
+                "end": "2025-12-31"
+              }
+            },
+            {
+              "row": 3,
+              "field": "vacancy_rate",
+              "value": "5",
+              "original": "5",
+              "unit": "percent",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "originalCell": {
+                "field": "vacancy rate",
+                "value": "5",
+                "unit": "percent",
+                "start": "2025-01-01",
+                "end": "2025-12-31"
+              }
+            },
+            {
+              "row": 4,
+              "field": "credit_loss_rate",
+              "value": "0",
+              "original": "0",
+              "unit": "fraction",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "originalCell": {
+                "field": "credit loss rate",
+                "value": "0",
+                "unit": "fraction",
+                "start": "2025-01-01",
+                "end": "2025-12-31"
+              }
+            },
+            {
+              "row": 5,
+              "field": "concessions_usd_annual",
+              "value": "0",
+              "original": "0",
+              "unit": "USD/year",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "originalCell": {
+                "field": "concessions",
+                "value": "0",
+                "unit": "USD/year",
+                "start": "2025-01-01",
+                "end": "2025-12-31"
+              }
+            },
+            {
+              "row": 6,
+              "field": "other_income_usd_annual",
+              "value": "2500",
+              "original": "2400",
+              "unit": "USD/year",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "originalCell": {
+                "field": "other income",
+                "value": "2400",
+                "unit": "USD/year",
+                "start": "2025-01-01",
+                "end": "2025-12-31"
+              }
+            },
+            {
+              "row": 7,
+              "field": "expense:operations",
+              "value": "31200",
+              "original": "31200",
+              "unit": "USD/year",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "originalCell": {
+                "field": "expense:operations",
+                "value": "31200",
+                "unit": "USD/year",
+                "start": "2025-01-01",
+                "end": "2025-12-31"
+              }
+            },
+            {
+              "row": 8,
+              "field": "management_fee_usd_annual",
+              "value": "0",
+              "original": "0",
+              "unit": "USD/year",
+              "start": "2025-01-01",
+              "end": "2025-12-31",
+              "originalCell": {
+                "field": "management fee",
+                "value": "0",
+                "unit": "USD/year",
+                "start": "2025-01-01",
+                "end": "2025-12-31"
+              }
+            }
+          ]
+        },
+        "result": {
+          "calculation": "income_noi",
+          "spec_version": "1.5",
+          "inputs": {
+            "gross_potential_rent_usd_annual": "96000",
+            "vacancy_rate": "0.05",
+            "credit_loss_rate": "0",
+            "concessions_usd_annual": "0",
+            "other_income_usd_annual": "2500",
+            "operating_expenses_usd_annual": {
+              "operations": "31200"
+            },
+            "management_fee_rate_of_egi": null,
+            "management_fee_usd_annual": "0"
+          },
+          "steps": [
+            {
+              "name": "vacancy_loss",
+              "formula": "gross_potential_rent x vacancy_rate",
+              "value": {
+                "value": "4800.00",
+                "unit": "USD",
+                "rounding": "2 decimal places, half-up",
+                "unrounded": "4800.00"
+              }
+            },
+            {
+              "name": "credit_loss",
+              "formula": "gross_potential_rent x credit_loss_rate",
+              "value": {
+                "value": "0.00",
+                "unit": "USD",
+                "rounding": "2 decimal places, half-up",
+                "unrounded": "0"
+              }
+            },
+            {
+              "name": "effective_gross_income",
+              "formula": "GPR - vacancy loss - credit loss - concessions + other income",
+              "value": {
+                "value": "93700.00",
+                "unit": "USD",
+                "rounding": "2 decimal places, half-up",
+                "unrounded": "93700.00"
+              }
+            },
+            {
+              "name": "management_fee",
+              "formula": "management fee = management_fee_usd_annual (fixed)",
+              "value": {
+                "value": "0.00",
+                "unit": "USD",
+                "rounding": "2 decimal places, half-up",
+                "unrounded": "0"
+              }
+            },
+            {
+              "name": "named_operating_expenses",
+              "formula": "sum of operating_expenses_usd_annual",
+              "value": {
+                "value": "31200.00",
+                "unit": "USD",
+                "rounding": "2 decimal places, half-up",
+                "unrounded": "31200"
+              }
+            },
+            {
+              "name": "total_operating_expenses",
+              "formula": "named expenses + management fee",
+              "value": {
+                "value": "31200.00",
+                "unit": "USD",
+                "rounding": "2 decimal places, half-up",
+                "unrounded": "31200"
+              }
+            },
+            {
+              "name": "net_operating_income",
+              "formula": "EGI - total operating expenses",
+              "value": {
+                "value": "62500.00",
+                "unit": "USD",
+                "rounding": "2 decimal places, half-up",
+                "unrounded": "62500.00"
+              }
+            },
+            {
+              "name": "expense_ratio",
+              "formula": "total operating expenses / EGI (undefined if EGI = 0)",
+              "value": {
+                "value": "0.332978",
+                "unit": "fraction",
+                "rounding": "6 decimal places, half-up",
+                "unrounded": "0.3329775880469583778014941302"
+              }
+            }
+          ],
+          "results": {
+            "gross_potential_rent_usd_annual": {
+              "value": "96000.00",
+              "unit": "USD",
+              "rounding": "2 decimal places, half-up",
+              "unrounded": "96000"
+            },
+            "vacancy_loss_usd_annual": {
+              "value": "4800.00",
+              "unit": "USD",
+              "rounding": "2 decimal places, half-up",
+              "unrounded": "4800.00"
+            },
+            "credit_loss_usd_annual": {
+              "value": "0.00",
+              "unit": "USD",
+              "rounding": "2 decimal places, half-up",
+              "unrounded": "0"
+            },
+            "concessions_usd_annual": {
+              "value": "0.00",
+              "unit": "USD",
+              "rounding": "2 decimal places, half-up",
+              "unrounded": "0"
+            },
+            "other_income_usd_annual": {
+              "value": "2500.00",
+              "unit": "USD",
+              "rounding": "2 decimal places, half-up",
+              "unrounded": "2500"
+            },
+            "effective_gross_income_usd_annual": {
+              "value": "93700.00",
+              "unit": "USD",
+              "rounding": "2 decimal places, half-up",
+              "unrounded": "93700.00"
+            },
+            "management_fee_usd_annual": {
+              "value": "0.00",
+              "unit": "USD",
+              "rounding": "2 decimal places, half-up",
+              "unrounded": "0"
+            },
+            "total_operating_expenses_usd_annual": {
+              "value": "31200.00",
+              "unit": "USD",
+              "rounding": "2 decimal places, half-up",
+              "unrounded": "31200"
+            },
+            "expense_ratio": {
+              "value": "0.332978",
+              "unit": "fraction",
+              "rounding": "6 decimal places, half-up",
+              "unrounded": "0.3329775880469583778014941302"
+            },
+            "net_operating_income_usd_annual": {
+              "value": "62500.00",
+              "unit": "USD",
+              "rounding": "2 decimal places, half-up",
+              "unrounded": "62500.00"
+            }
+          },
+          "warnings": []
+        }
+      }
+    }
+  ]
+}

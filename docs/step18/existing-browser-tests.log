@@ -1,0 +1,51 @@
+
+[WebServer] (node:29852) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 35 tests using 2 workers
+
+
+(node:28912) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+
+(node:29400) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+[1/35] [desktop] › e2e\design-system.spec.ts:5:1 › rent-roll loading feedback remains visible until parsing finishes and recovers from errors
+[2/35] [desktop] › e2e\backup.spec.ts:4:1 › monthly CSV/XLSX imports preserve their sources and all decision subtools open
+[3/35] [desktop] › e2e\design-system.spec.ts:48:1 › chart download exposes progress, prevents duplicate exports and resolves design tokens
+[4/35] [desktop] › e2e\design-system.spec.ts:105:1 › shared white surfaces, component shapes and readable headings remain consistent
+[5/35] [desktop] › e2e\backup.spec.ts:71:1 › evidence files survive portable backup restoration to new IDs
+[6/35] [desktop] › e2e\planner-layout.spec.ts:4:1 › monthly planner remains readable with the EasyList sidebar filter
+[7/35] [desktop] › e2e\backup.spec.ts:135:1 › actuals and negative historical money inputs distinguish blanks and valid zero
+[8/35] [desktop] › e2e\propertyiq.spec.ts:65:1 › shared demo, changing inputs, money formatting and no console errors
+[9/35] [desktop] › e2e\release.spec.ts:3:1 › criteria, maximum offer, what breaks first and yearly cash-on-cash
+[10/35] [desktop] › e2e\shipping.spec.ts:23:1 › chart keyboard inspection, supported downloads, disclosed data and hold alignment
+[11/35] [desktop] › e2e\propertyiq.spec.ts:131:3 › import and apply rent-roll.csv
+[12/35] [desktop] › e2e\shipping.spec.ts:114:1 › quick provenance survives money editing, reload, portable restore and cancelled reset
+[13/35] [desktop] › e2e\propertyiq.spec.ts:131:3 › import and apply rent-roll.xlsx
+[14/35] [desktop] › e2e\propertyiq.spec.ts:153:1 › import shows what will change, can be undone, and a bad file offers a way forward
+[15/35] [desktop] › e2e\shipping.spec.ts:169:1 › monthly money editing, stale stress, duplicate provenance and backup restoration
+[16/35] [desktop] › e2e\propertyiq.spec.ts:183:1 › local save status shows last saved, unsaved edits and the backup reminder
+[17/35] [desktop] › e2e\propertyiq.spec.ts:202:1 › new start, review, import and report states have no serious axe violations
+[18/35] [desktop] › e2e\shipping.spec.ts:245:1 › actual PDF output for brief and ten-year tables
+[19/35] [desktop] › e2e\propertyiq.spec.ts:244:1 › new start-page controls show a keyboard focus ring
+[20/35] [desktop] › e2e\propertyiq.spec.ts:266:1 › composer extraction and editable assumption defaults
+[21/35] [desktop] › e2e\propertyiq.spec.ts:308:1 › start page leads with one action, states trust and flags zero defaults
+[22/35] [desktop] › e2e\propertyiq.spec.ts:354:1 › quick results sit above exports and backups
+[23/35] [desktop] › e2e\propertyiq.spec.ts:368:1 › phones fold sections and assumptions away so results come first
+[24/35] [desktop] › e2e\propertyiq.spec.ts:394:1 › report metrics explain themselves and link to their calculation
+[25/35] [desktop] › e2e\propertyiq.spec.ts:406:3 › motion polish with motion on › the sample card tilts toward the pointer from every side
+[26/35] [desktop] › e2e\propertyiq.spec.ts:430:3 › motion polish with motion on › the primary action has a border beam and a theme switch cleans up after itself
+[27/35] [desktop] › e2e\propertyiq.spec.ts:446:1 › guided start leads a refinance question to the refinance check
+[28/35] [desktop] › e2e\propertyiq.spec.ts:482:1 › refinance and sell-vs-hold answer with the sample deal
+[29/35] [desktop] › e2e\propertyiq.spec.ts:502:1 › long monthly tables fold away and the project card stays put
+[30/35] [desktop] › e2e\propertyiq.spec.ts:525:1 › monthly wayfinding, exact project history, deep links and legal routing
+[31/35] [desktop] › e2e\propertyiq.spec.ts:583:1 › live hash changes switch modes and retain legal pages
+[32/35] [desktop] › e2e\propertyiq.spec.ts:606:1 › accessibility and 390px overflow on key screens
+[33/35] [desktop] › e2e\propertyiq.spec.ts:686:3 › top bars with motion on › keep every control inside the viewport from 320px to 768px
+[34/35] [desktop] › e2e\propertyiq.spec.ts:751:1 › all monthly tools render, remain accessible and fit the viewport
+[35/35] [desktop] › e2e\propertyiq.spec.ts:813:1 › remaining quick and legal views are accessible and fit the viewport
+  1 skipped
+  34 passed (1.4m)

@@ -1,0 +1,48 @@
+{
+  "online": {
+    "cached": [
+      "model_q4f16.onnx",
+      "config.json",
+      "tokenizer_config.json",
+      "generation_config.json",
+      "tokenizer.json"
+    ],
+    "probe": "WebGPU: yes, 16-bit shaders: yes, largest buffer 2,147 MB, largest storage binding 2,147 MB. Device memory: 32 GB. Storage: 0 MB used of 10,737 MB",
+    "runs": [
+      {
+        "device": "webgpu",
+        "load": "Ready on webgpu in 14.5 s",
+        "run": "Answered in 0.7 s",
+        "output": "<think>\n\n</think>\n\nThe answer is: **Blue**."
+      },
+      {
+        "device": "wasm",
+        "load": "Ready on wasm in 2.7 s",
+        "run": "Answered in 17.7 s",
+        "output": "<think>\n\n</think>\n\nThe answer is: **Blue**."
+      }
+    ],
+    "modelHostRequests": 16,
+    "outside": [],
+    "aborted": [],
+    "errors": []
+  },
+  "offline": {
+    "cached": [
+      "model_q4f16.onnx",
+      "config.json",
+      "tokenizer_config.json",
+      "generation_config.json",
+      "tokenizer.json"
+    ],
+    "run": {
+      "device": "wasm",
+      "load": "Ready on wasm in 4.2 s",
+      "run": "Answered in 18.4 s",
+      "output": "<think>\n\n</think>\n\nThe answer is: **Blue**."
+    },
+    "modelHostRequests": 0,
+    "aborted": [],
+    "errors": []
+  }
+}

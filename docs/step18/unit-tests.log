@@ -1,0 +1,9 @@
+
+ RUN  v4.1.11 C:/Users/Lewis/Documents/Codex/step18-propertyiq
+
+
+ Test Files  18 passed (18)
+      Tests  255 passed (255)
+   Start at  19:41:48
+   Duration  2.59s (transform 2.71s, setup 0ms, import 6.04s, tests 926ms, environment 2ms)
+

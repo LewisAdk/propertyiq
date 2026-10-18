@@ -1,0 +1,54 @@
+{
+  "assistant": {
+    "model": "qwen3:4b-instruct-2507-q4_K_M",
+    "text": "A financial assumption is a projected or estimated value used in a financial model, based on expectations or hypothetical scenarios, without independent verification. A verified calculation, in contrast, is a result derived from actual data or inputs that have been independently checked and confirmed for accuracy. While assumptions guide planning, verified calculations reflect real, validated outcomes.",
+    "load_seconds": 0.000725861,
+    "generation_seconds": 0.598175,
+    "tokens": 66,
+    "verified_calculation": false
+  },
+  "request_seconds": 0.6810383529991668,
+  "ollama_residency": {
+    "models": [
+      {
+        "name": "qwen3:4b-instruct-2507-q4_K_M",
+        "model": "qwen3:4b-instruct-2507-q4_K_M",
+        "size": 2876160081,
+        "digest": "0edcdef34593eac1aa2be9c7d06c432dcf81945adca5eca2f27662c18f168ba0",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "qwen3",
+          "families": [
+            "qwen3"
+          ],
+          "parameter_size": "4.0B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-17T19:49:42.378733453-05:00",
+        "size_vram": 2876160081,
+        "context_length": 2048,
+        "runner": "llamacpp"
+      }
+    ]
+  },
+  "gpu_after_4b": "NVIDIA GeForce RTX 2080 SUPER, 3977 MiB, 4011 MiB, 8192 MiB",
+  "busy_gpu_behavior": "Classification fit alongside the resident model",
+  "services": {
+    "openwebui": {
+      "status": true
+    },
+    "calculator": {
+      "status": "ok",
+      "service": "realestate-calculators",
+      "spec_version": "1.5",
+      "api_version": "1.5.0",
+      "read_only": true
+    }
+  },
+  "final_guard_live_check": {
+    "status": 422,
+    "error": "GPU busy: an Ollama model is resident. Retry after its normal idle timeout; this prototype does not unload your assistant.",
+    "existing_assistant_not_unloaded": true
+  }
+}

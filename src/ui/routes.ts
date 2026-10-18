@@ -28,3 +28,8 @@ export function navigate(hash: string) {
   );
   window.dispatchEvent(new HashChangeEvent("hashchange"));
 }
+
+// Experimental document assistant (src/ai/browser): flagged builds, or the dev bridge prototype.
+export const documentAssistant =
+  import.meta.env.VITE_BROWSER_AI === "1" ||
+  (import.meta.env.DEV && import.meta.env.VITE_LOCAL_AI === "1");

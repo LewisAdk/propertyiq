@@ -1,0 +1,26 @@
+test_calculation_requires_confirmation_and_fixed_tool (test_bridge.BridgeTests.test_calculation_requires_confirmation_and_fixed_tool) ... ok
+test_chat_routes_only_to_4b (test_bridge.BridgeTests.test_chat_routes_only_to_4b) ... ok
+test_editor_json_is_validated_before_any_calculation (test_bridge.BridgeTests.test_editor_json_is_validated_before_any_calculation) ... ok
+test_explicit_cpu_fallback_leaves_ollama_alone (test_bridge.BridgeTests.test_explicit_cpu_fallback_leaves_ollama_alone) ... ok
+test_http_rejects_foreign_origin_and_host (test_bridge.BridgeTests.test_http_rejects_foreign_origin_and_host) ... 127.0.0.1 - - [17/Oct/2026 20:06:48] "POST /api/local-ai/chat HTTP/1.1" 403 -
+127.0.0.1 - - [17/Oct/2026 20:06:48] "POST /api/local-ai/chat HTTP/1.1" 403 -
+ok
+test_reserve_fails_closed (test_bridge.BridgeTests.test_reserve_fails_closed) ... ok
+test_resident_assistant_is_not_unloaded_or_competed_with (test_bridge.BridgeTests.test_resident_assistant_is_not_unloaded_or_competed_with) ... ok
+test_session_and_busy_http (test_bridge.BridgeTests.test_session_and_busy_http) ... 127.0.0.1 - - [17/Oct/2026 20:06:48] "POST /api/local-ai/chat HTTP/1.1" 401 -
+127.0.0.1 - - [17/Oct/2026 20:06:48] "POST /api/local-ai/session HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 20:06:48] "POST /api/local-ai/chat HTTP/1.1" 409 -
+127.0.0.1 - - [17/Oct/2026 20:06:48] "POST /api/local-ai/session HTTP/1.1" 200 -
+127.0.0.1 - - [17/Oct/2026 20:06:48] "POST /api/local-ai/chat HTTP/1.1" 401 -
+ok
+test_strict_financial_json (test_bridge.BridgeTests.test_strict_financial_json) ... ok
+test_strict_labels (test_bridge.BridgeTests.test_strict_labels) ... ok
+test_worker_timeout_does_not_publish_output (test_bridge.BridgeTests.test_worker_timeout_does_not_publish_output) ... ok
+test_cuda_unavailable_fails_before_loading (test_worker.WorkerPreflightTests.test_cuda_unavailable_fails_before_loading) ... ok
+test_insufficient_cpu_ram_fails_before_loading (test_worker.WorkerPreflightTests.test_insufficient_cpu_ram_fails_before_loading) ... ok
+test_insufficient_vram_fails_before_loading (test_worker.WorkerPreflightTests.test_insufficient_vram_fails_before_loading) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 1.059s
+
+OK
