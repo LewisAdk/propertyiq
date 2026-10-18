@@ -687,21 +687,6 @@
   justify-items: start;
 }
 
-/* Homepage entry, directly under the search bar (flagged builds). */
-.iq-assist {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-8);
-  margin: var(--space-16) auto 0;
-}
-.iq-assist-tag {
-  padding: var(--space-2) var(--space-8);
-  border: var(--stroke-thin) solid var(--color-border-strong);
-  border-radius: var(--radius-round);
-  color: var(--color-muted);
-  font-size: var(--text-12);
-  font-weight: var(--weight-semibold);
-}
 /* The dev-only 4B assistant panel, placed in the page instead of floating. */
 .dr-assistant .local-ai {
   position: static;

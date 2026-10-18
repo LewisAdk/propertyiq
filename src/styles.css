@@ -6271,6 +6271,15 @@ button.theme-toggle[role="switch"]:hover {
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: var(--space-12);
 }
+/* Three tools (the flagged Document assistant card): one centered row of equal cards. */
+.iq-other-modes-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 720px) {
+  .iq-other-modes-3 {
+    grid-template-columns: 1fr;
+  }
+}
 .iq-other-modes button {
   display: flex;
   flex-direction: column;
