@@ -1,12 +1,12 @@
 # Hugging Face release: PropertyIQ research Qwen3-1.7B (browser build)
 
-Status: **C, preview verified; ready for your production approval.** The model is published (`bb21176a`), the branch is pushed and its Cloudflare preview passes end to end. Production is unchanged.
+Status: **Live in production (2026-10-18).** The model is published (`bb21176a`); PRs #1 and #2 are merged and https://propertyiq.pages.dev serves the Document assistant (third tool card on the homepage).
 
 ## 1. GitHub
 - Branch `step18/ai-integration`, local commit `38369b1` (author: Lewis Adkins, noreply). Based on `origin/main` `5331fc2`, which is current. **Not pushed**: GitHub CLI isn't logged in, and pushing waits for your OK.
 - 91 files, none over 1 MB. No secrets, tokens or personal email (scanned). `.gitignore` now excludes `*.onnx`, `*.onnx_data`, `*.safetensors`, `*.gguf`, `.huggingface/` and `hf_token*`. No model binaries are in the repo.
 - Note: 11 local-dev scripts and reports contain WSL paths such as `/home/lewis/...`. They need these to run locally. Remove them if you'd rather not publish the paths.
-- The PropertyIQ repo has **no LICENSE file**, so the app is "all rights reserved" by default. The model's Apache-2.0 applies only to the weights repo. Choosing an app licence is a separate decision.
+- The PropertyIQ app code is licensed **MIT** (`LICENSE`, added 2026-10-18). The model's Apache-2.0 applies only to the weights repo on Hugging Face.
 
 ## 2. Hugging Face repository (proposed)
 - Account: `AwesomeLewis64` (free plan; signed in in the browser pane).
@@ -89,7 +89,7 @@ Earlier evidence:
 $0. Cloudflare Pages Free (static only, no Functions). Hugging Face free public repo (no card, no per-download billing documented). No R2. Visitor bandwidth for the 2.17 GB model comes from Hugging Face's CDN; heavy abuse could prompt Hugging Face to ask for an upgrade (their "best-effort" policy), but nothing bills you automatically.
 
 ## 10. Production status
-Unchanged. `https://propertyiq.pages.dev/` still serves `main` (`5331fc2`). The model repo is public, but nothing in production links to it yet.
+Live. `main` (PR #1 `46a3ca51`, PR #2 `fea3f04f`) is deployed with the three Production variables set. Verified from a clean browser on production: nothing downloads before consent; first load 54 s; 12/12 labels equal FP16; workflow to $62,500.00; offline reload 6.0 s. App code is MIT-licensed (`LICENSE`); the model weights stay Apache-2.0 on Hugging Face.
 
 ## 11. What you need to do
 1. ~~Approve publication; upload~~: done (`bb21176a`). **Now delete the write token** (Hugging Face → Settings → Access Tokens → `propertyiq-release` → Delete). Downloads don't need it.

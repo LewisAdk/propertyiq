@@ -1,6 +1,7 @@
 {
   "name": "propertyiq",
   "private": true,
+  "license": "MIT",
   "version": "2.6.0",
   "type": "module",
   "scripts": {
