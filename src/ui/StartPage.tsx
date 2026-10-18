@@ -681,7 +681,13 @@ export default function StartPage({
               </ul>
               <section className="iq-other" aria-labelledby="iq-other-title">
                 <h2 id="iq-other-title">Or start with a tool</h2>
-                <div className="iq-other-modes">
+                <div
+                  className={
+                    documentAssistant
+                      ? "iq-other-modes iq-other-modes-3"
+                      : "iq-other-modes"
+                  }
+                >
                   <button onClick={() => onAnnual()}>
                     <LayoutDashboard size={22} aria-hidden="true" />
                     <strong>Quick analysis</strong>
