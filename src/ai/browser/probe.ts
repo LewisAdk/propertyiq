@@ -70,8 +70,10 @@ export const MODELS: Record<ModelId, ModelInfo> = {
     repo: "piq-qwen3-1.7b-repaired",
     // Public build: VITE_RESEARCH_MODEL_URL = pinned static base URL (ends with /).
     // Otherwise the local prototype serves it at /models/ and nothing is stored.
-    host: () => researchUrl ?? `${self.location.origin}/models/`,
-    path: researchUrl ? "" : "{model}/",
+    // Never an empty path: transformers.js would join it into "<host>//<file>".
+    host: () =>
+      pinned ? "https://huggingface.co/" : `${self.location.origin}/models/`,
+    path: pinned ? `${pinned[1]}/resolve/${pinned[2]}/` : "{model}/",
     hostLabel: researchUrl
       ? new URL(researchUrl).host
       : "this site (local prototype)",

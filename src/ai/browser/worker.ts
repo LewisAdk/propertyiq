@@ -124,6 +124,31 @@ function throttled() {
   };
 }
 
+// Public build: the 26.9 MB runtime lives in the pinned release. Its CDN URLs are signed
+// and expire, so the HTTP cache cannot keep it; store it in Cache Storage after checking
+// the release listing, and hand ONNX Runtime the bytes directly.
+async function loadRuntime() {
+  if (!runtime.url || !runtime.verify)
+    throw new Error("The model runtime is not from the pinned release");
+  const want = Object.values(runtime.verify.files)[0];
+  const cache = await caches.open(CACHE);
+  let response = await cache.match(runtime.url);
+  if (!response) {
+    await checkRelease(runtime.verify);
+    const fresh = await fetch(runtime.url);
+    if (!fresh.ok)
+      throw new Error(`Runtime download failed: HTTP ${fresh.status}`);
+    await cache.put(runtime.url, fresh.clone());
+    response = fresh;
+  }
+  const bytes = await response.arrayBuffer();
+  if (bytes.byteLength !== want.size) {
+    await cache.delete(runtime.url);
+    throw new Error("The model runtime download was incomplete; try again.");
+  }
+  env.backends.onnx.wasm!.wasmBinary = bytes;
+}
+
 self.onmessage = async ({ data }: MessageEvent<Request>) => {
   const start = performance.now();
   let stored = false;
@@ -136,11 +161,7 @@ self.onmessage = async ({ data }: MessageEvent<Request>) => {
       env.remotePathTemplate = info.path; // commit pinned in the path (4.3.1 drops `revision` while listing files)
       env.useBrowserCache = info.store;
       const progress = throttled();
-      if (runtime.url) {
-        if (!runtime.verify)
-          throw new Error("The model runtime is not from the pinned release");
-        await checkRelease(runtime.verify);
-      }
+      if (runtime.url) await loadRuntime();
       stored = info.store && (await cacheWeights(data.model, progress));
       const tokenizer = await AutoTokenizer.from_pretrained(info.repo);
       const model = await AutoModelForCausalLM.from_pretrained(info.repo, {

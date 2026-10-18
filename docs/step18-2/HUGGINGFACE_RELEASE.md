@@ -1,6 +1,6 @@
 # Hugging Face release: PropertyIQ research Qwen3-1.7B (browser build)
 
-Status: **A, ready for your approval to publish the model weights.** Nothing is uploaded, pushed or deployed.
+Status: **Model published with your approval (2026-10-18), verified from a clean browser.** The GitHub branch is not pushed and no Cloudflare preview or production change has been made.
 
 ## 1. GitHub
 - Branch `step18/ai-integration`, local commit `38369b1` (author: Lewis Adkins, noreply). Based on `origin/main` `5331fc2`, which is current. **Not pushed**: GitHub CLI isn't logged in, and pushing waits for your OK.
@@ -10,7 +10,7 @@ Status: **A, ready for your approval to publish the model weights.** Nothing is 
 
 ## 2. Hugging Face repository (proposed)
 - Account: `AwesomeLewis64` (free plan; signed in in the browser pane).
-- Repo: **`AwesomeLewis64/propertyiq-qwen3-1.7b-research-onnx`** → https://huggingface.co/AwesomeLewis64/propertyiq-qwen3-1.7b-research-onnx (public model repo, not yet created).
+- Repo: **https://huggingface.co/AwesomeLewis64/propertyiq-qwen3-1.7b-research-onnx** (public). Release commit **`bb21176a95bcfdeafdcb006dc126dd6bd52ad5a7`**, uploaded with `hf upload` (huggingface_hub 2.1.1, separate venv `~/.venv-hf`). All 13 files were verified remotely against MANIFEST.sha256 (LFS SHA-256 for large files, git blob IDs for small ones). The only extra file is the repo's default `.gitattributes`.
 - Free tier (official docs, verified 2026-10-18): public storage is "best-effort" (they ask that uploads be useful), the hard limit is 500 GB per file, and no payment is needed. About 2.17 GB fits. No PRO, no paid inference: visitors download the files and run them themselves.
 
 ## 3. Files (release folder `/home/lewis/conv-dev/export/hf_release/propertyiq-qwen3-1.7b-research-onnx`, built from hardlinks)
@@ -57,7 +57,13 @@ Status: **A, ready for your approval to publish the model weights.** Nothing is 
 - The app accepts only a URL pinned to a 40-character commit. Before downloading, it checks that the Hugging Face file listing for that commit reports the compiled SHA-256 and size of the weights and the runtime file. After streaming, it checks the byte count and refuses on any mismatch, keeping nothing.
 
 ## 6. Real-world download and cache results
-**Pending publication.** Measured so far:
+**Measured on the published release** (`e2e-browser-ai/public.spec.ts`, clean Chromium profile, WebGPU, no local model server; `public-release-results.json`):
+- Hugging Face serves 302 redirects to `us.aws.cdn.hf.co` (covered by `*.hf.co`), CORS echoes the site origin, `.wasm` is served as `application/wasm`, and range requests return 206.
+- First visit: nothing contacts Hugging Face before consent. Consent, then download (2.17 GB incl. runtime) and load took **53.5 s** on this connection. 18 Hugging Face requests, no other hosts, no console errors. **12/12** labels equal the FP16 reference (6/12 vs expected, as before). The full workflow (upload → model suggestion → confirm T-12 → review with a correction → approve → calculate) gave **$62,500.00**.
+- Return visit with the internet blocked: loaded from browser storage in **5.8 s**, suggestion in 0.5 s, **0 network requests** outside the app. The weights and the runtime file are both reused from Cache Storage.
+- Fixed during this test: an empty Transformers.js path template produced `//` URLs. The runtime file is now cached because the CDN signs and expires its URLs.
+
+Earlier evidence:
 - The Hugging Face listing API is readable cross-origin from the app, and its LFS hashes match what this check expects (tested on the generic model).
 - The generic model loads from Hugging Face via redirect to `*.hf.co`, streams into Cache Storage and reloads offline.
 - **Not yet proven:** the 2.1 GB research file through Hugging Face's CDN, and the content type of the `.wasm` file served from Hugging Face. If it isn't `application/wasm`, the runtime should fall back to slower compilation; check this on the preview.
@@ -77,19 +83,19 @@ Status: **A, ready for your approval to publish the model weights.** Nothing is 
 $0. Cloudflare Pages Free (static only, no Functions). Hugging Face free public repo (no card, no per-download billing documented). No R2. Visitor bandwidth for the 2.17 GB model comes from Hugging Face's CDN; heavy abuse could prompt Hugging Face to ask for an upgrade (their "best-effort" policy), but nothing bills you automatically.
 
 ## 10. Production status
-Unchanged. `https://propertyiq.pages.dev/` still serves `main` (`5331fc2`).
+Unchanged. `https://propertyiq.pages.dev/` still serves `main` (`5331fc2`). The model repo is public, but nothing in production links to it yet.
 
 ## 11. What you need to do
-1. **Approve publication** of the files in §3 (reply "publish").
-2. **Create a write token** on Hugging Face: Settings → Access Tokens → New token → Fine-grained → enable "Write" for the repo `AwesomeLewis64/propertyiq-qwen3-1.7b-research-onnx` (create the repo first, empty and public, via New → Model). Do **not** paste it here.
-3. **Store the token locally** (only you type it). In a terminal:
+1. ~~Approve publication; upload~~: done (`bb21176a`). **Now delete the write token** (Hugging Face → Settings → Access Tokens → `propertyiq-release` → Delete). Downloads don't need it.
+2. ~~Create a write token~~ (done) on Hugging Face: Settings → Access Tokens → New token → Fine-grained → enable "Write" for the repo `AwesomeLewis64/propertyiq-qwen3-1.7b-research-onnx` (create the repo first, empty and public, via New → Model). Do **not** paste it here.
+3. ~~Store the token locally~~ (done) (only you type it). In a terminal:
 
    ```
    wsl -d Ubuntu-24.04 -- bash -lc "python3 -m venv ~/.venv-hf && ~/.venv-hf/bin/pip install 'huggingface_hub[hf_xet]==1.0.*' && ~/.venv-hf/bin/hf auth login"
    ```
 
    `huggingface_hub` isn't installed in any existing environment; it's a small download, about 5 MB.
-4. Then I upload with `hf upload AwesomeLewis64/propertyiq-qwen3-1.7b-research-onnx /home/lewis/conv-dev/export/hf_release/propertyiq-qwen3-1.7b-research-onnx . --repo-type model`, record the commit SHA, and verify the remote hashes.
+4. ~~Upload~~ (done): `hf upload AwesomeLewis64/propertyiq-qwen3-1.7b-research-onnx /home/lewis/conv-dev/export/hf_release/propertyiq-qwen3-1.7b-research-onnx . --repo-type model`, record the commit SHA, and verify the remote hashes.
 5. **Approve the push** of `step18/ai-integration`. Your call: log in to GitHub CLI with `gh auth login`, or push it yourself. Then set the three Preview env vars in Cloudflare.
 6. After I verify the preview: approve the merge to `main` (production).
 

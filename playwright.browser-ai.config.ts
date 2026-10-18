@@ -27,6 +27,7 @@ export default defineConfig({
       },
     },
     { name: "runtime", testMatch: "runtime.spec.ts" },
+    { name: "public", testMatch: "public.spec.ts" },
   ],
   webServer: {
     command: "pnpm exec vite preview --port 4198 --strictPort",

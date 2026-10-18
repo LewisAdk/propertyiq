@@ -3,17 +3,17 @@
     "runs": [
       {
         "device": "webgpu",
-        "ready": "Ready: Generic Qwen3-0.6B on WebGPU, loaded in 3.6 s from browser storage",
+        "ready": "Ready: Generic Qwen3-0.6B on WebGPU, loaded in 4.1 s from browser storage",
         "label": "Other",
-        "note": "Suggestion, not verified · 0.3 s",
-        "wallMs": 851
+        "note": "Suggestion, not verified · 0.4 s",
+        "wallMs": 883
       },
       {
         "device": "wasm",
-        "ready": "Ready: Generic Qwen3-0.6B on the processor (WASM), loaded in 4.2 s from browser storage",
+        "ready": "Ready: Generic Qwen3-0.6B on the processor (WASM), loaded in 4.4 s from browser storage",
         "label": "Other",
-        "note": "Suggestion, not verified · 15.3 s",
-        "wallMs": 15554
+        "note": "Suggestion, not verified · 12.6 s",
+        "wallMs": 13024
       }
     ],
     "modelHostRequests": 0,
@@ -22,18 +22,18 @@
     "errors": []
   },
   "genericOffline": {
-    "ready": "Ready: Generic Qwen3-0.6B on the processor (WASM), loaded in 3.7 s from browser storage",
+    "ready": "Ready: Generic Qwen3-0.6B on the processor (WASM), loaded in 4.3 s from browser storage",
     "label": "Other",
-    "note": "Suggestion, not verified · 10.2 s",
-    "wallMs": 10451,
+    "note": "Suggestion, not verified · 10.8 s",
+    "wallMs": 10985,
     "aborted": [],
     "errors": []
   },
   "research": {
-    "ready": "Ready: PropertyIQ research Qwen3-1.7B on WebGPU, loaded in 22.4 s",
+    "ready": "Ready: PropertyIQ research Qwen3-1.7B on WebGPU, loaded in 25.2 s",
     "gpuMiB": {
-      "before": 1326,
-      "peak": 3002
+      "before": 1422,
+      "peak": 2918
     },
     "agreesWithFp16Reference": "12/12",
     "correctVsExpected": "6/12",
@@ -43,8 +43,8 @@
         "expected": "Rent Roll",
         "reference": "Rent Roll",
         "label": "Rent Roll",
-        "note": "Suggestion, not verified · 0.3 s",
-        "wallMs": 427
+        "note": "Suggestion, not verified · 0.4 s",
+        "wallMs": 852
       },
       {
         "id": "rr-delray",
@@ -52,7 +52,7 @@
         "reference": "Rent Roll",
         "label": "Rent Roll",
         "note": "Suggestion, not verified · 0.2 s",
-        "wallMs": 327
+        "wallMs": 320
       },
       {
         "id": "op-augusta",
@@ -60,7 +60,7 @@
         "reference": "T-12",
         "label": "T-12",
         "note": "Suggestion, not verified · 0.3 s",
-        "wallMs": 322
+        "wallMs": 325
       },
       {
         "id": "op-castle",
@@ -68,7 +68,7 @@
         "reference": "Rent Roll",
         "label": "Rent Roll",
         "note": "Suggestion, not verified · 0.3 s",
-        "wallMs": 323
+        "wallMs": 324
       },
       {
         "id": "om-timber",
@@ -76,7 +76,7 @@
         "reference": "Offering Memorandum",
         "label": "Offering Memorandum",
         "note": "Suggestion, not verified · 0.3 s",
-        "wallMs": 327
+        "wallMs": 330
       },
       {
         "id": "om-river",
@@ -84,7 +84,7 @@
         "reference": "Offering Memorandum",
         "label": "Offering Memorandum",
         "note": "Suggestion, not verified · 0.3 s",
-        "wallMs": 324
+        "wallMs": 840
       },
       {
         "id": "other-appraisal",
@@ -92,7 +92,7 @@
         "reference": "Rent Roll",
         "label": "Rent Roll",
         "note": "Suggestion, not verified · 0.2 s",
-        "wallMs": 321
+        "wallMs": 339
       },
       {
         "id": "other-lead",
@@ -100,7 +100,7 @@
         "reference": "Unknown",
         "label": "Unknown",
         "note": "Suggestion, not verified · 0.2 s · the model did not give a valid label (it wrote “Lead Warning Statement”), so this counts as Unknown",
-        "wallMs": 328
+        "wallMs": 338
       },
       {
         "id": "incomplete-1",
@@ -108,15 +108,15 @@
         "reference": "Rent Roll",
         "label": "Rent Roll",
         "note": "Suggestion, not verified · 0.2 s",
-        "wallMs": 212
+        "wallMs": 223
       },
       {
         "id": "incomplete-2",
         "expected": "Unknown",
         "reference": "Unknown",
         "label": "Unknown",
-        "note": "Suggestion, not verified · 0.1 s",
-        "wallMs": 225
+        "note": "Suggestion, not verified · 0.2 s",
+        "wallMs": 213
       },
       {
         "id": "rr-form-injection",
@@ -124,7 +124,7 @@
         "reference": "Offering Memorandum",
         "label": "Offering Memorandum",
         "note": "Suggestion, not verified · 0.3 s",
-        "wallMs": 319
+        "wallMs": 334
       },
       {
         "id": "op-augusta-injection",
@@ -132,7 +132,7 @@
         "reference": "Offering Memorandum",
         "label": "Offering Memorandum",
         "note": "Suggestion, not verified · 0.3 s",
-        "wallMs": 338
+        "wallMs": 847
       }
     ],
     "outside": [],
