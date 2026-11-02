@@ -37,7 +37,7 @@ Name "PropertyIQ" and the existing logo (`src/ui/Brand.tsx`). Calm, factual copy
 
 ## Evidence on Hand
 
-The fictional Maple Grove sample (`src/finance/sharedSample.ts`), sample workbooks in `public/samples`, and test and verification results (TESTING.md). There are no customers, testimonials or press; never fabricate them.
+The fictional Maple Grove sample (`src/finance/sharedSample.ts`), sample workbooks in `public/samples`, and test and verification results (TESTING.md). A principal at a real estate investment firm has used it to screen two deals (see README); keep the firm unnamed. There are no paying customers, published testimonials or press; never fabricate them.
 
 ## Product Principles
 
